@@ -1,0 +1,104 @@
+{
+    "information": {
+        "title": "My project",
+        "author": "John Doe",
+        "contact": "a@b.com"
+    },
+    "models": [{
+            "name": "Model 1",
+            "description": null,
+            "use": {
+                "intended use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ],
+                "out-of-scope use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ],
+                "excluded use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ]
+            },
+            "user": {
+                "intended user": "",
+                "out-of-scope user": null,
+                "excluded user": null
+            }
+
+        },
+        {
+            "name": "Model 2",
+            "description": null,
+            "use": null
+        }
+    ],
+    "datasets": [{
+        "name": "Dataset 1",
+        "information": {
+            "author": {},
+            "date": "2024-04-05",
+            "version": "1.0",
+            "license": "none",
+            "email": "ckahn@rsna.org"
+        }
+    }]
+}
