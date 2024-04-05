@@ -1,0 +1,761 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "information",
+        "models",
+        "datasets"
+    ],
+    "properties": {
+        "information": {
+            "type": "object",
+            "default": {},
+            "title": "The information Schema",
+            "required": [
+                "title",
+                "author",
+                "contact"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The title Schema",
+                    "examples": [
+                        "My project"
+                    ]
+                },
+                "author": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The author Schema",
+                    "examples": [
+                        "John Doe"
+                    ]
+                },
+                "contact": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The contact Schema",
+                    "examples": [
+                        "a@b.com"
+                    ]
+                }
+            },
+            "examples": [{
+                "title": "My project",
+                "author": "John Doe",
+                "contact": "a@b.com"
+            }]
+        },
+        "models": {
+            "type": "array",
+            "default": [],
+            "title": "The models Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "name",
+                    "description",
+                    "use",
+                    "user"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "The name Schema",
+                        "examples": [
+                            "Model 1",
+                            "Model 2"
+                        ]
+                    },
+                    "description": {
+                        "type": "null",
+                        "title": "The description Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "use": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "title": "The use Schema",
+                        "required": [
+                            "intended use",
+                            "out-of-scope use",
+                            "excluded use"
+                        ],
+                        "properties": {
+                            "intended use": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The intended use Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                },
+                                "examples": [
+                                    ["Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Prognosis",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                ]
+                            },
+                            "out-of-scope use": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The out-of-scope use Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                },
+                                "examples": [
+                                    ["Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Prognosis",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                ]
+                            },
+                            "excluded use": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The excluded use Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                },
+                                "examples": [
+                                    ["Risk assessment",
+                                        "Procedure selection",
+                                        "Exam protocol selection",
+                                        "Triage",
+                                        "Detection",
+                                        "Diagnosis",
+                                        "Decision support",
+                                        "Prognosis",
+                                        "Image processing",
+                                        "Image reconstruction",
+                                        "Image style transfer",
+                                        "Noise reduction",
+                                        "Artifact reduction",
+                                        "Prognosis",
+                                        "Segmentation",
+                                        "Report processing",
+                                        "Report summarization",
+                                        "Report generation",
+                                        "Report impression generation",
+                                        "Report data extraction",
+                                        "Report translation"
+                                    ]
+                                ]
+                            }
+                        },
+                        "examples": [{
+                                "intended use": [
+                                    "Risk assessment",
+                                    "Procedure selection",
+                                    "Exam protocol selection",
+                                    "Triage",
+                                    "Detection",
+                                    "Diagnosis",
+                                    "Decision support",
+                                    "Prognosis",
+                                    "Image processing",
+                                    "Image reconstruction",
+                                    "Image style transfer",
+                                    "Noise reduction",
+                                    "Artifact reduction",
+                                    "Prognosis",
+                                    "Segmentation",
+                                    "Report processing",
+                                    "Report summarization",
+                                    "Report generation",
+                                    "Report impression generation",
+                                    "Report data extraction",
+                                    "Report translation"
+                                ],
+                                "out-of-scope use": [
+                                    "Risk assessment",
+                                    "Procedure selection",
+                                    "Exam protocol selection",
+                                    "Triage",
+                                    "Detection",
+                                    "Diagnosis",
+                                    "Decision support",
+                                    "Prognosis",
+                                    "Image processing",
+                                    "Image reconstruction",
+                                    "Image style transfer",
+                                    "Noise reduction",
+                                    "Artifact reduction",
+                                    "Prognosis",
+                                    "Segmentation",
+                                    "Report processing",
+                                    "Report summarization",
+                                    "Report generation",
+                                    "Report impression generation",
+                                    "Report data extraction",
+                                    "Report translation"
+                                ],
+                                "excluded use": [
+                                    "Risk assessment",
+                                    "Procedure selection",
+                                    "Exam protocol selection",
+                                    "Triage",
+                                    "Detection",
+                                    "Diagnosis",
+                                    "Decision support",
+                                    "Prognosis",
+                                    "Image processing",
+                                    "Image reconstruction",
+                                    "Image style transfer",
+                                    "Noise reduction",
+                                    "Artifact reduction",
+                                    "Prognosis",
+                                    "Segmentation",
+                                    "Report processing",
+                                    "Report summarization",
+                                    "Report generation",
+                                    "Report impression generation",
+                                    "Report data extraction",
+                                    "Report translation"
+                                ]
+                            },
+                            null
+                        ]
+                    },
+                    "user": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The user Schema",
+                        "required": [
+                            "intended user",
+                            "out-of-scope user",
+                            "excluded user"
+                        ],
+                        "properties": {
+                            "intended user": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The intended user Schema",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "out-of-scope user": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The out-of-scope user Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "excluded user": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The excluded user Schema",
+                                "examples": [
+                                    null
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "intended user": "",
+                            "out-of-scope user": null,
+                            "excluded user": null
+                        }]
+                    }
+                },
+                "examples": [{
+                    "name": "Model 1",
+                    "description": null,
+                    "use": {
+                        "intended use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ],
+                        "out-of-scope use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ],
+                        "excluded use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ]
+                    },
+                    "user": {
+                        "intended user": "",
+                        "out-of-scope user": null,
+                        "excluded user": null
+                    }
+                },
+                {
+                    "name": "Model 2",
+                    "description": null,
+                    "use": null
+                }]
+            },
+            "examples": [
+                [{
+                    "name": "Model 1",
+                    "description": null,
+                    "use": {
+                        "intended use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ],
+                        "out-of-scope use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ],
+                        "excluded use": [
+                            "Risk assessment",
+                            "Procedure selection",
+                            "Exam protocol selection",
+                            "Triage",
+                            "Detection",
+                            "Diagnosis",
+                            "Decision support",
+                            "Prognosis",
+                            "Image processing",
+                            "Image reconstruction",
+                            "Image style transfer",
+                            "Noise reduction",
+                            "Artifact reduction",
+                            "Prognosis",
+                            "Segmentation",
+                            "Report processing",
+                            "Report summarization",
+                            "Report generation",
+                            "Report impression generation",
+                            "Report data extraction",
+                            "Report translation"
+                        ]
+                    },
+                    "user": {
+                        "intended user": "",
+                        "out-of-scope user": null,
+                        "excluded user": null
+                    }
+                },
+                {
+                    "name": "Model 2",
+                    "description": null,
+                    "use": null
+                }]
+            ]
+        },
+        "datasets": {
+            "type": "array",
+            "default": [],
+            "title": "The datasets Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "name",
+                    "information"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                            "Dataset 1"
+                        ]
+                    },
+                    "information": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The information Schema",
+                        "required": [
+                            "author",
+                            "date",
+                            "version",
+                            "license",
+                            "email"
+                        ],
+                        "properties": {
+                            "author": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The author Schema",
+                                "required": [],
+                                "properties": {},
+                                "examples": [{}]
+                            },
+                            "date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The date Schema",
+                                "examples": [
+                                    "2024-04-05"
+                                ]
+                            },
+                            "version": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The version Schema",
+                                "examples": [
+                                    "1.0"
+                                ]
+                            },
+                            "license": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The license Schema",
+                                "examples": [
+                                    "none"
+                                ]
+                            },
+                            "email": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The email Schema",
+                                "examples": [
+                                    "ckahn@rsna.org"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "author": {},
+                            "date": "2024-04-05",
+                            "version": "1.0",
+                            "license": "none",
+                            "email": "ckahn@rsna.org"
+                        }]
+                    }
+                },
+                "examples": [{
+                    "name": "Dataset 1",
+                    "information": {
+                        "author": {},
+                        "date": "2024-04-05",
+                        "version": "1.0",
+                        "license": "none",
+                        "email": "ckahn@rsna.org"
+                    }
+                }]
+            },
+            "examples": [
+                [{
+                    "name": "Dataset 1",
+                    "information": {
+                        "author": {},
+                        "date": "2024-04-05",
+                        "version": "1.0",
+                        "license": "none",
+                        "email": "ckahn@rsna.org"
+                    }
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "information": {
+            "title": "My project",
+            "author": "John Doe",
+            "contact": "a@b.com"
+        },
+        "models": [{
+            "name": "Model 1",
+            "description": null,
+            "use": {
+                "intended use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ],
+                "out-of-scope use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ],
+                "excluded use": [
+                    "Risk assessment",
+                    "Procedure selection",
+                    "Exam protocol selection",
+                    "Triage",
+                    "Detection",
+                    "Diagnosis",
+                    "Decision support",
+                    "Prognosis",
+                    "Image processing",
+                    "Image reconstruction",
+                    "Image style transfer",
+                    "Noise reduction",
+                    "Artifact reduction",
+                    "Prognosis",
+                    "Segmentation",
+                    "Report processing",
+                    "Report summarization",
+                    "Report generation",
+                    "Report impression generation",
+                    "Report data extraction",
+                    "Report translation"
+                ]
+            },
+            "user": {
+                "intended user": "",
+                "out-of-scope user": null,
+                "excluded user": null
+            }
+        },
+        {
+            "name": "Model 2",
+            "description": null,
+            "use": null
+        }],
+        "datasets": [{
+            "name": "Dataset 1",
+            "information": {
+                "author": {},
+                "date": "2024-04-05",
+                "version": "1.0",
+                "license": "none",
+                "email": "ckahn@rsna.org"
+            }
+        }]
+    }]
+}
