@@ -1447,7 +1447,7 @@ Class: rmdo:RMDO_00122
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00122",
-        rdfs:label "Image characteristics"
+        rdfs:label "Image characteristic"@en
     
     SubClassOf: 
         rmdo:RMDO_00001
@@ -1460,7 +1460,7 @@ Class: rmdo:RMDO_00123
         rdfs:label "Resolution"
     
     SubClassOf: 
-        rmdo:RMDO_00001
+        rmdo:RMDO_00122
     
     
 Class: rmdo:RMDO_00124
@@ -1491,7 +1491,7 @@ Class: rmdo:RMDO_00126
         rdfs:label "Pre-processing"
     
     SubClassOf: 
-        rmdo:RMDO_00001
+        rmdo:RMDO_00122
     
     
 Class: rmdo:RMDO_00127
@@ -1517,11 +1517,12 @@ Class: rmdo:RMDO_00128
 Class: rmdo:RMDO_00129
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "PHI"@en,
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00129",
         rdfs:label "Protected Health Information"
     
     SubClassOf: 
-        rmdo:RMDO_00001
+        rmdo:RMDO_00122
     
     
 Class: rmdo:RMDO_00130
@@ -36893,6 +36894,7 @@ Class: rmdo:RMDO_03342
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Intersection over Union score",
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "IoU coefficient",
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "IoU score",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Jaccard coefficient"@en,
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Jaccard index",
         rdfs:label "Intersection over Union"@en
     
@@ -36967,7 +36969,7 @@ Class: rmdo:RMDO_03351
         rdfs:label "Decision threshold"@en
     
     SubClassOf: 
-        rmdo:RMDO_00001
+        rmdo:RMDO_03355
     
     
 Class: rmdo:RMDO_03352
@@ -37058,5 +37060,183 @@ Class: rmdo:RMDO_03360
     
     SubClassOf: 
         rmdo:RMDO_03359
+    
+    
+Class: rmdo:RMDO_03362
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:03362",
+        rdfs:label "2D image label"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00052
+    
+    
+Class: rmdo:RMDO_03363
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:03363",
+        rdfs:label "3D image label"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00052
+    
+    
+Class: rmdo:RMDO_03364
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "ROI annotation"@en,
+        rdfs:label "Region of interest annotation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00051
+    
+    
+Class: rmdo:RMDO_03365
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Annotator descriptor"@en,
+        rdfs:label "Annotation labeler descriptor"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001
+    
+    
+Class: rmdo:RMDO_03366
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Annotator count",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Number of annotators",
+        rdfs:label "Annotation labeler count"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03365
+    
+    
+Class: rmdo:RMDO_03367
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Annotator qualifications",
+        rdfs:label "Annotation labeler qualifications"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03365
+    
+    
+Class: rmdo:RMDO_03368
+
+    Annotations: 
+        rdfs:label "Scope of annotation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03365
+    
+    
+Class: rmdo:RMDO_03369
+
+    Annotations: 
+        rdfs:label "Burned-in PHI present"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00129
+    
+    
+Class: rmdo:RMDO_03370
+
+    Annotations: 
+        rdfs:label "Burned-in PHI absent"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00129
+    
+    
+Class: rmdo:RMDO_03371
+
+    Annotations: 
+        rdfs:label "Burned-in PHI removed"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00129
+    
+    
+Class: rmdo:RMDO_03372
+
+    Annotations: 
+        rdfs:label "Annotation labeler instructions"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03365
+    
+    
+Class: rmdo:RMDO_03373
+
+    Annotations: 
+        rdfs:label "Model availability"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03355
+    
+    
+Class: rmdo:RMDO_03374
+
+    Annotations: 
+        rdfs:label "Model availability comment"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03373
+    
+    
+Class: rmdo:RMDO_03375
+
+    Annotations: 
+        rdfs:label "Model availability source"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03373
+    
+    
+Class: rmdo:RMDO_03376
+
+    Annotations: 
+        rdfs:label "Sustainability"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03355
+    
+    
+Class: rmdo:RMDO_03377
+
+    Annotations: 
+        rdfs:label "Time to train model"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03376
+    
+    
+Class: rmdo:RMDO_03378
+
+    Annotations: 
+        rdfs:label "Time to evaluate single input"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03376
+    
+    
+Class: rmdo:RMDO_03379
+
+    Annotations: 
+        rdfs:label "Required processors"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03376
+    
+    
+Class: rmdo:RMDO_03380
+
+    Annotations: 
+        rdfs:label "Carbon footprint calculation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03376
     
     
