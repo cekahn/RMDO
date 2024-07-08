@@ -1,6 +1,8 @@
 Prefix: : <urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6>
 Prefix: cde: <https://radelement.org/elements/>
+Prefix: orcid: <https://orcid.org/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: pwc: <https://paperswithcode.com/>
 Prefix: radlex: <https://radlex.org/RID/>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -82,7 +84,7 @@ ObjectProperty: rmdo:RMDO_00116
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00116",
-        rdfs:label "hasDetail"
+        rdfs:label "hasDescriptor"@en
     
     Range: 
         rmdo:RMDO_00004
@@ -159,6 +161,18 @@ ObjectProperty: rmdo:RMDO_03350
         rmdo:RMDO_03355
     
     
+ObjectProperty: rmdo:RMDO_03382
+
+    Annotations: 
+        rdfs:label "hasDatasetProperty"@en
+    
+    Domain: 
+        rmdo:RMDO_00003
+    
+    Range: 
+        rmdo:RMDO_03381
+    
+    
 Class: owl:Thing
 
     
@@ -223,8 +237,9 @@ Class: rmdo:RMDO_00006
 
     Annotations: 
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Validation data",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Validation dataset"@en,
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00006",
-        rdfs:label "Validation dataset"
+        rdfs:label "Optimization dataset"
     
     SubClassOf: 
         rmdo:RMDO_00003
@@ -37240,3 +37255,380 @@ Class: rmdo:RMDO_03380
         rmdo:RMDO_03376
     
     
+Class: rmdo:RMDO_03381
+
+    Annotations: 
+        rdfs:label "Dataset property"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001
+    
+    
+Class: rmdo:RMDO_03383
+
+    Annotations: 
+        rdfs:comment "\"The following questions are primarily intended to encourage dataset creators to clearly articulate their reasons for creating the dataset and to promote transparency about funding interests. The latter may be particularly relevant for datasets created for research purposes.\""@en,
+        rdfs:label "Motivation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03381
+    
+    
+Class: rmdo:RMDO_03384
+
+    Annotations: 
+        rdfs:comment "\"For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled?\"",
+        rdfs:label "Dataset purpose"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03383
+    
+    
+Class: rmdo:RMDO_03385
+
+    Annotations: 
+        rdfs:comment "Specify grantor, grant name, and number.",
+        rdfs:label "Funding"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00004,
+        rmdo:RMDO_03383
+    
+    
+Class: rmdo:RMDO_03386
+
+    Annotations: 
+        rdfs:comment "\"Who created the dataset (for example, which team, research group) and on behalf of which entity (for example, company, institution, organization)?\"",
+        rdfs:label "Dataset creation team"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03383
+    
+    
+Class: rmdo:RMDO_03387
+
+    Annotations: 
+        rdfs:label "Dataset motivation comments"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03383
+    
+    
+Class: rmdo:RMDO_03388
+
+    Annotations: 
+        rdfs:label "Composition"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03381
+    
+    
+Class: rmdo:RMDO_03389
+
+    Annotations: 
+        rdfs:comment "\"What do the instances that comprise the dataset represent (for example, documents, photos, people, countries)? Are there multiple types of instances (for example, movies, users, and ratings; people and interactions between them; nodes and edges)?\"",
+        rdfs:label "Data type"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03390
+
+    Annotations: 
+        rdfs:label "Radiology report text"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03391
+
+    Annotations: 
+        rdfs:label "Image"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03392
+
+    Annotations: 
+        rdfs:label "Medical record data"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03393
+
+    Annotations: 
+        rdfs:label "Photograph"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03394
+
+    Annotations: 
+        rdfs:label "Graph"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03395
+
+    Annotations: 
+        rdfs:comment "\"How many instances are there in total (of each type, if appropriate)?\"",
+        rdfs:label "Number of instances"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03396
+
+    Annotations: 
+        rdfs:comment "\"Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (for example, geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (for example, to cover a more diverse range of instances, because instances were withheld or unavailable).\"",
+        rdfs:label "Representativeness"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03397
+
+    Annotations: 
+        rdfs:comment "\"23. If the dataset is a sample from a larger set, what was the sampling strategy (for example, deterministic, probabilistic with specific sampling probabilities)?\"",
+        rdfs:label "Sample type"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03396
+    
+    
+Class: rmdo:RMDO_03398
+
+    Annotations: 
+        rdfs:label "Complete population"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03397
+    
+    
+Class: rmdo:RMDO_03399
+
+    Annotations: 
+        rdfs:label "Random sample"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03397
+    
+    
+Class: rmdo:RMDO_03400
+
+    Annotations: 
+        rdfs:label "Convenience sample"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03397
+    
+    
+Class: rmdo:RMDO_03401
+
+    Annotations: 
+        rdfs:label "Population"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03396
+    
+    
+Class: rmdo:RMDO_03402
+
+    Annotations: 
+        rdfs:label "Verification of representativeness"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03396
+    
+    
+Class: rmdo:RMDO_03404
+
+    Annotations: 
+        rdfs:label "Non-random sample"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03397
+    
+    
+Class: rmdo:RMDO_03405
+
+    Annotations: 
+        rdfs:label "Raw data / no pre-processing"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00126
+    
+    
+Class: rmdo:RMDO_03406
+
+    Annotations: 
+        rdfs:label "Feature extraction"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00126
+    
+    
+Class: rmdo:RMDO_03407
+
+    Annotations: 
+        rdfs:comment "\"Is there a label or target associated with each instance? If so, please provide a description.\"",
+        rdfs:label "Labeling"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03408
+
+    Annotations: 
+        rdfs:comment "\"Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (for example, because it was unavailable). This does not include intentionally removed information, but might include, for example, redacted text.\"",
+        rdfs:label "Missing information"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03409
+
+    Annotations: 
+        rdfs:comment "\"Are relationships between individual instances made explicit (for example, social network links)? If so, please describe how these relationships are made explicit.\"",
+        rdfs:label "Relationships between instances"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03410
+
+    Annotations: 
+        rdfs:comment "\"Are there recommended data splits (for example, training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.\"",
+        rdfs:label "Partitions"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03411
+
+    Annotations: 
+        rdfs:comment "Describe any errors, sources of noise, or redundancies in the dataset.",
+        rdfs:label "Noise"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03412
+
+    Annotations: 
+        rdfs:comment "\"Is the dataset self-contained, or does it link to or otherwise rely on external resources (for example, websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (that is, including the external resources as they existed at the time the dataset was created); c) are there any restrictions (for example, licenses, fees) associated with any of the external resources that might apply to a dataset consumer? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.\"",
+        rdfs:label "External data"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03413
+
+    Annotations: 
+        rdfs:comment "\"Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)? If so, please provide a description.\"",
+        rdfs:label "Confidentiality"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03414
+
+    Annotations: 
+        rdfs:comment "\"17. Does the dataset identify any subpopulations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.\"",
+        rdfs:label "Subpopulations"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03415
+
+    Annotations: 
+        rdfs:comment "\"18. Is it possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset? If so, please describe how.\"",
+        rdfs:label "Re-identification"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03416
+
+    Annotations: 
+        rdfs:comment "\"19. Does the dataset contain data that might be considered sensitive in any way (for example, data that reveals race or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.\"",
+        rdfs:label "Sensitive data"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03388
+    
+    
+Class: rmdo:RMDO_03417
+
+    Annotations: 
+        rdfs:label "Collection process"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03381
+    
+    
+Class: rmdo:RMDO_03418
+
+    Annotations: 
+        rdfs:comment "Describe ethical review of project, model, and/or dataset by Institutional Review Board or other review body.",
+        rdfs:label "Ethical review"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00004
+    
+    
+Class: rmdo:RMDO_03419
+
+    Annotations: 
+        rdfs:label "Creation date"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00065
+    
+    
+Class: rmdo:RMDO_03420
+
+    Annotations: 
+        rdfs:label "Publication date"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00065
+    
+    
+Class: rmdo:RMDO_03421
+
+    Annotations: 
+        rdfs:label "Date of last update"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00065
+    
+    
+DisjointClasses: 
+    rmdo:RMDO_03390,rmdo:RMDO_03391,rmdo:RMDO_03392,rmdo:RMDO_03393,rmdo:RMDO_03394
+
+DisjointClasses: 
+    rmdo:RMDO_03398,rmdo:RMDO_03399,rmdo:RMDO_03400
+
