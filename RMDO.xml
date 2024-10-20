@@ -65,6 +65,12 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
@@ -97,6 +103,12 @@
     <!-- http://www.w3.org/2001/XMLSchema#anyURI -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#nonNegativeInteger -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     
 
 
@@ -225,6 +237,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -321,8 +350,9 @@
     <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_00006">
         <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_00003"/>
         <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Validation data</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Validation dataset</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
         <oboInOwl:id>RMDO:00006</oboInOwl:id>
-        <rdfs:label>Validation dataset</rdfs:label>
+        <rdfs:label>Optimization dataset</rdfs:label>
     </owl:Class>
     
 
@@ -37727,6 +37757,556 @@ Thus, a Project can encapsulate a model and its data, a model only, or a dataset
     
 
 
+    <!-- https://rsna.org/rmdo/RMDO_03422 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03422">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_00001"/>
+        <rdfs:label xml:lang="en">Patient descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03423 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03423">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03422"/>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03424 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03424">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03422"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://rsna.org/rmdo/RMDO_00631"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/rmdo/RMDO_03428"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03425 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03425">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03424"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Birth sex</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">SAAB</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:comment xml:lang="en">Birth Sex
+Applicable Vocabulary Standard(s)
+
+Birth sex must be coded in accordance with HL7 Version 3 (V3) Standard, Value Sets for AdministrativeGender and NullFlavor attributed as follows:
+
+Female. F
+Male. M
+Unknown. nullFlavor UNK
+Adopted at 45 CFR 170.207(n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Sex assigned at birth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03426 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03426">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03424"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">RSoG</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Recorded sex or gender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03427 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03427">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03424"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">SFCU</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Sex for clinical use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03428 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03428">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_00001"/>
+        <rdfs:label xml:lang="en">Sex value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03429 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03429">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03428"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Male</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Male sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03430 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03430">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03428"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Female</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Female sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03431 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03431">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03428"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Unknown</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Unknown sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03432 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03432">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03422"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Gender</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Patient gender</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:comment xml:lang="en">Values for gender identity should include male, female, nonbinary, exploring or questioning, another not listed (specify), choose not to disclose, and unknown. CSTE recommends that the terms transgender, female to male and transgender male to female be deprecated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gender identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03433 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03433">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Male gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03434 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03434">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Female gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03435 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03435">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Nonbinary gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03436 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03436">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Exploring</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Questioning</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Questioning gender identify</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:label xml:lang="en">Exploring gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03437 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03437">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Another gender identify not listed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03438 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03438">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Choose not to disclose gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03439 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03439">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03432"/>
+        <rdfs:label xml:lang="en">Unknown gender identify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03440 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03440">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03428"/>
+        <rdfs:label xml:lang="en">Sex not listed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03441 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03441">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03422"/>
+        <rdfs:comment xml:lang="en">Asian:
+
+Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese, Another group (for example, Pakistani, Hmong, Afghan, etc.)
+
+Black or African American:
+
+African American, Jamaican, Haitian, Nigerian, Ethiopian, Somali, Another group (for example, Trinidadian and Tobagonian, Ghanian, Congolese, etc.)
+
+Hispanic or Latino:
+
+Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, Another group (for example, Colombian, Honduran, Spaniard, etc.)
+
+Middle Eastern or North African:
+
+Lebanese, Iranian, Egyptian, Syrian, Iraqi, Israeli, Another group (for example, Moroccan, Yemeni, Kurdish, etc.)
+
+Native Hawaiian or Pacific Islander:
+
+Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese, Another group (for example, Chuukese, Palauan, Tahitian, etc.)
+
+White:
+
+English, German, Irish, Italian, Polish, Scottish, Another group (for example, French, Swedish, Norwegian, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">Race / ethnicity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03442 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03442">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment>Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese, Another group (for example, Pakistani, Hmong, Afghan, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>Individuals with origins in any of the original peoples of Central or East Asia, Southeast Asia, or South Asia, including, for example, Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Asian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03443 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03443">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment xml:lang="en">African American, Jamaican, Haitian, Nigerian, Ethiopian, Somali, Another group (for example, Trinidadian and Tobagonian, Ghanian, Congolese, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>Individuals with origins in any of the Black racial groups of Africa, including, for example, African American, Jamaican, Haitian, Nigerian, Ethiopian, and Somali.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Black or African American</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03444 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03444">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment xml:lang="en">Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, Another group (for example, Colombian, Honduran, Spaniard, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>Includes individuals of Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, and other Central or South American or Spanish culture or origin.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Hispanic or Latino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03445 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03445">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment>Lebanese, Iranian, Egyptian, Syrian, Iraqi, Israeli, Another group (for example, Moroccan, Yemeni, Kurdish, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>Individuals with origins in any of the original peoples of the Middle East or North Africa, including, for example, Lebanese, Iranian, Egyptian, Syrian, Iraqi, and Israeli.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Middle Eastern or North African</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03446 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03446">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment>Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese, Another group (for example, Chuukese, Palauan, Tahitian, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>Individuals with origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands, including, for example, Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, and Marshallese.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Native Hawaiian or Pacific Islander</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03447 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03447">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:comment xml:lang="en">English, German, Irish, Italian, Polish, Scottish, Another group (for example, French, Swedish, Norwegian, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Individuals with origins in any of the original peoples of Europe, including, for example, English, German, Irish, Italian, Polish, and Scottish.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">White</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03448 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03448">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03441"/>
+        <rdfs:isDefinedBy xml:lang="en">Individuals with origins in any of the original peoples of North, Central, and South America, including, for example, Navajo Nation, Blackfeet Tribe of the Blackfeet Indian Reservation of Montana, Native Village of Barrow Inupiat Traditional Government, Nome Eskimo Community, Aztec, and Maya.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">American Indian or Alaska Native</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03449 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03449">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03423"/>
+        <rdfs:label xml:lang="en">Age group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03450 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03450">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03449"/>
+        <rdfs:isDefinedBy>Age 18 years or more
+
+MeSH definition:  A person having attained full growth or maturity. Adults are of 19 through 44 years of age. For a person between 19 and 24 years of age, YOUNG ADULT is available.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adult</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03451 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03451">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03461"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Child</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy xml:lang="en">Age 2 - 12 years
+
+MeSH definition:  A person 6 to 12 years of age. An individual 2 to 5 years old is CHILD, PRESCHOOL.</rdfs:isDefinedBy>
+        <rdfs:label>Child</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03452 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03452">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03461"/>
+        <rdfs:isDefinedBy>A child between 1 and 23 months of age.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Infant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03453 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03453">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03452"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Newborn</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Newborn infant</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>An infant during the first 28 days after birth.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Neonate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03454 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03454">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03451"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Preschool child</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>An individual 2 to 5 years old is CHILD, PRESCHOOL.</rdfs:isDefinedBy>
+        <rdfs:label>Child  2 - 5 years</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03455 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03455">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03461"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Teen</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Teenager</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>A person 13 to 17 years of age.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adolescent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03456 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03456">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03450"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Young adult</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>A person between 19 and 24 years of age.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adult 18 - 24 years</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03457 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03457">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03450"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>Middle aged</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Middle aged adult</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>An adult aged 45 - 64 years.</rdfs:isDefinedBy>
+        <rdfs:label>Adult 45 - 64 years</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03458 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03458">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03450"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">Aged adult</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>A person 65 years of age or older. For a person older than 79 years, AGED, 80 AND OVER is available.</rdfs:isDefinedBy>
+        <rdfs:label>Adult 65 years and over</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03459 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03459">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03458"/>
+        <rdfs:label xml:lang="en">Adult 80 years and over</rdfs:label>
+        <rdfs:label>Aged</rdfs:label>
+        <rdfs:label>Aged adult</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03460 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03460">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03451"/>
+        <c46d389-52ef-468b-a58c-f168e57d95e6:altLabel xml:lang="en">School-age child</c46d389-52ef-468b-a58c-f168e57d95e6:altLabel>
+        <rdfs:isDefinedBy>Age 6 - 12 years</rdfs:isDefinedBy>
+        <rdfs:label>Child  6 - 12 years</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03461 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03461">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03449"/>
+        <rdfs:label xml:lang="en">Minor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03462 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03462">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03423"/>
+        <rdfs:label xml:lang="en">Age range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03463 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03463">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_00001"/>
+        <rdfs:label xml:lang="en">Age value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03464 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03464">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03462"/>
+        <rdfs:label xml:lang="en">Age minimum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03465 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03465">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03462"/>
+        <rdfs:label xml:lang="en">Age maximum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03466 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03466">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03463"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Age number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03467 -->
+
+    <owl:Class rdf:about="https://rsna.org/rmdo/RMDO_03467">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/rmdo/RMDO_03463"/>
+        <rdfs:label xml:lang="en">Age unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03468 -->
+
+    <owl:NamedIndividual rdf:about="https://rsna.org/rmdo/RMDO_03468">
+        <rdf:type rdf:resource="https://rsna.org/rmdo/RMDO_03467"/>
+        <rdfs:label xml:lang="en">Days</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03469 -->
+
+    <owl:NamedIndividual rdf:about="https://rsna.org/rmdo/RMDO_03469">
+        <rdf:type rdf:resource="https://rsna.org/rmdo/RMDO_03467"/>
+        <rdfs:label xml:lang="en">Months</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rsna.org/rmdo/RMDO_03470 -->
+
+    <owl:NamedIndividual rdf:about="https://rsna.org/rmdo/RMDO_03470">
+        <rdf:type rdf:resource="https://rsna.org/rmdo/RMDO_03467"/>
+        <rdfs:label xml:lang="en">Years</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -37757,5 +38337,5 @@ Thus, a Project can encapsulate a model and its data, a model only, or a dataset
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
