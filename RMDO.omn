@@ -39,6 +39,9 @@ AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#id>
 AnnotationProperty: rdfs:comment
 
     
+AnnotationProperty: rdfs:isDefinedBy
+
+    
 AnnotationProperty: rdfs:label
 
     
@@ -49,6 +52,9 @@ Datatype: rdf:PlainLiteral
 
     
 Datatype: xsd:anyURI
+
+    
+Datatype: xsd:nonNegativeInteger
 
     
 Datatype: xsd:string
@@ -171,6 +177,510 @@ ObjectProperty: rmdo:RMDO_03382
     
     Range: 
         rmdo:RMDO_03381
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <https://rsna.org/rmdo/RMDO_03422>
+
+    Annotations: 
+        rdfs:label "Patient descriptor"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03423>
+
+    Annotations: 
+        rdfs:label "Age"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03422>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03424>
+
+    Annotations: 
+        rdfs:label "Sex"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03422>,
+        rmdo:RMDO_00631 some <https://rsna.org/rmdo/RMDO_03428>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03425>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Birth sex"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "SAAB"@en,
+        rdfs:comment "Birth Sex
+Applicable Vocabulary Standard(s)
+
+Birth sex must be coded in accordance with HL7 Version 3 (V3) Standard, Value Sets for AdministrativeGender and NullFlavor attributed as follows:
+
+Female. F
+Male. M
+Unknown. nullFlavor UNK
+Adopted at 45 CFR 170.207(n)"@en,
+        rdfs:label "Sex assigned at birth"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03424>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03426>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "RSoG"@en,
+        rdfs:label "Recorded sex or gender"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03424>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03427>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "SFCU"@en,
+        rdfs:label "Sex for clinical use"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03424>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03428>
+
+    Annotations: 
+        rdfs:label "Sex value"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03429>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Male",
+        rdfs:label "Male sex"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03428>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03430>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Female",
+        rdfs:label "Female sex"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03428>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03431>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Unknown"@en,
+        rdfs:label "Unknown sex"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03428>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03432>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Gender"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Patient gender"@en,
+        rdfs:comment "Values for gender identity should include male, female, nonbinary, exploring or questioning, another not listed (specify), choose not to disclose, and unknown. CSTE recommends that the terms transgender, female to male and transgender male to female be deprecated."@en,
+        rdfs:label "Gender identity"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03422>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03433>
+
+    Annotations: 
+        rdfs:label "Male gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03434>
+
+    Annotations: 
+        rdfs:label "Female gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03435>
+
+    Annotations: 
+        rdfs:label "Nonbinary gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03436>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Questioning"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Questioning gender identify"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Exploring",
+        rdfs:label "Exploring gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03437>
+
+    Annotations: 
+        rdfs:label "Another gender identify not listed"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03438>
+
+    Annotations: 
+        rdfs:label "Choose not to disclose gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03439>
+
+    Annotations: 
+        rdfs:label "Unknown gender identify"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03432>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03440>
+
+    Annotations: 
+        rdfs:label "Sex not listed"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03428>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03441>
+
+    Annotations: 
+        rdfs:comment "Asian:
+
+Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese, Another group (for example, Pakistani, Hmong, Afghan, etc.)
+
+Black or African American:
+
+African American, Jamaican, Haitian, Nigerian, Ethiopian, Somali, Another group (for example, Trinidadian and Tobagonian, Ghanian, Congolese, etc.)
+
+Hispanic or Latino:
+
+Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, Another group (for example, Colombian, Honduran, Spaniard, etc.)
+
+Middle Eastern or North African:
+
+Lebanese, Iranian, Egyptian, Syrian, Iraqi, Israeli, Another group (for example, Moroccan, Yemeni, Kurdish, etc.)
+
+Native Hawaiian or Pacific Islander:
+
+Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese, Another group (for example, Chuukese, Palauan, Tahitian, etc.)
+
+White:
+
+English, German, Irish, Italian, Polish, Scottish, Another group (for example, French, Swedish, Norwegian, etc.)"@en,
+        rdfs:label "Race / ethnicity"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03422>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03442>
+
+    Annotations: 
+        rdfs:comment "Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese, Another group (for example, Pakistani, Hmong, Afghan, etc.)",
+        rdfs:isDefinedBy "Individuals with origins in any of the original peoples of Central or East Asia, Southeast Asia, or South Asia, including, for example, Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese.",
+        rdfs:label "Asian"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03443>
+
+    Annotations: 
+        rdfs:comment "African American, Jamaican, Haitian, Nigerian, Ethiopian, Somali, Another group (for example, Trinidadian and Tobagonian, Ghanian, Congolese, etc.)"@en,
+        rdfs:isDefinedBy "Individuals with origins in any of the Black racial groups of Africa, including, for example, African American, Jamaican, Haitian, Nigerian, Ethiopian, and Somali.",
+        rdfs:label "Black or African American"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03444>
+
+    Annotations: 
+        rdfs:comment "Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, Another group (for example, Colombian, Honduran, Spaniard, etc.)"@en,
+        rdfs:isDefinedBy "Includes individuals of Mexican, Puerto Rican, Salvadoran, Cuban, Dominican, Guatemalan, and other Central or South American or Spanish culture or origin.",
+        rdfs:label "Hispanic or Latino"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03445>
+
+    Annotations: 
+        rdfs:comment "Lebanese, Iranian, Egyptian, Syrian, Iraqi, Israeli, Another group (for example, Moroccan, Yemeni, Kurdish, etc.)",
+        rdfs:isDefinedBy "Individuals with origins in any of the original peoples of the Middle East or North Africa, including, for example, Lebanese, Iranian, Egyptian, Syrian, Iraqi, and Israeli.",
+        rdfs:label "Middle Eastern or North African"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03446>
+
+    Annotations: 
+        rdfs:comment "Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese, Another group (for example, Chuukese, Palauan, Tahitian, etc.)",
+        rdfs:isDefinedBy "Individuals with origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands, including, for example, Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, and Marshallese.",
+        rdfs:label "Native Hawaiian or Pacific Islander"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03447>
+
+    Annotations: 
+        rdfs:comment "English, German, Irish, Italian, Polish, Scottish, Another group (for example, French, Swedish, Norwegian, etc.)"@en,
+        rdfs:isDefinedBy "Individuals with origins in any of the original peoples of Europe, including, for example, English, German, Irish, Italian, Polish, and Scottish."@en,
+        rdfs:label "White"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03448>
+
+    Annotations: 
+        rdfs:isDefinedBy "Individuals with origins in any of the original peoples of North, Central, and South America, including, for example, Navajo Nation, Blackfeet Tribe of the Blackfeet Indian Reservation of Montana, Native Village of Barrow Inupiat Traditional Government, Nome Eskimo Community, Aztec, and Maya."@en,
+        rdfs:label "American Indian or Alaska Native"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03441>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03449>
+
+    Annotations: 
+        rdfs:label "Age group"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03423>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03450>
+
+    Annotations: 
+        rdfs:isDefinedBy "Age 18 years or more
+
+MeSH definition:  A person having attained full growth or maturity. Adults are of 19 through 44 years of age. For a person between 19 and 24 years of age, YOUNG ADULT is available.",
+        rdfs:label "Adult"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03449>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03451>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Child"@en,
+        rdfs:isDefinedBy "Age 2 - 12 years
+
+MeSH definition:  A person 6 to 12 years of age. An individual 2 to 5 years old is CHILD, PRESCHOOL."@en,
+        rdfs:label "Child"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03461>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03452>
+
+    Annotations: 
+        rdfs:isDefinedBy "A child between 1 and 23 months of age.",
+        rdfs:label "Infant"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03461>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03453>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Newborn",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Newborn infant",
+        rdfs:isDefinedBy "An infant during the first 28 days after birth.",
+        rdfs:label "Neonate"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03452>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03454>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Preschool child"@en,
+        rdfs:isDefinedBy "An individual 2 to 5 years old is CHILD, PRESCHOOL.",
+        rdfs:label "Child  2 - 5 years"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03451>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03455>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Teen",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Teenager",
+        rdfs:isDefinedBy "A person 13 to 17 years of age.",
+        rdfs:label "Adolescent"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03461>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03456>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Young adult",
+        rdfs:isDefinedBy "A person between 19 and 24 years of age.",
+        rdfs:label "Adult 18 - 24 years"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03450>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03457>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Middle aged adult"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Middle aged",
+        rdfs:isDefinedBy "An adult aged 45 - 64 years.",
+        rdfs:label "Adult 45 - 64 years"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03450>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03458>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Aged adult"@en,
+        rdfs:isDefinedBy "A person 65 years of age or older. For a person older than 79 years, AGED, 80 AND OVER is available.",
+        rdfs:label "Adult 65 years and over"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03450>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03459>
+
+    Annotations: 
+        rdfs:label "Adult 80 years and over"@en,
+        rdfs:label "Aged",
+        rdfs:label "Aged adult"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03458>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03460>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "School-age child"@en,
+        rdfs:isDefinedBy "Age 6 - 12 years",
+        rdfs:label "Child  6 - 12 years"
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03451>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03461>
+
+    Annotations: 
+        rdfs:label "Minor"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03449>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03462>
+
+    Annotations: 
+        rdfs:label "Age range"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03423>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03463>
+
+    Annotations: 
+        rdfs:label "Age value"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03464>
+
+    Annotations: 
+        rdfs:label "Age minimum"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03462>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03465>
+
+    Annotations: 
+        rdfs:label "Age maximum"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03462>
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03466>
+
+    Annotations: 
+        rdfs:label "Age number"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03463>,
+        owl:topDataProperty exactly 1 xsd:nonNegativeInteger
+    
+    
+Class: <https://rsna.org/rmdo/RMDO_03467>
+
+    Annotations: 
+        rdfs:label "Age unit"@en
+    
+    SubClassOf: 
+        <https://rsna.org/rmdo/RMDO_03463>
     
     
 Class: owl:Thing
@@ -37624,6 +38134,33 @@ Class: rmdo:RMDO_03421
     
     SubClassOf: 
         rmdo:RMDO_00065
+    
+    
+Individual: <https://rsna.org/rmdo/RMDO_03468>
+
+    Annotations: 
+        rdfs:label "Days"@en
+    
+    Types: 
+        <https://rsna.org/rmdo/RMDO_03467>
+    
+    
+Individual: <https://rsna.org/rmdo/RMDO_03469>
+
+    Annotations: 
+        rdfs:label "Months"@en
+    
+    Types: 
+        <https://rsna.org/rmdo/RMDO_03467>
+    
+    
+Individual: <https://rsna.org/rmdo/RMDO_03470>
+
+    Annotations: 
+        rdfs:label "Years"@en
+    
+    Types: 
+        <https://rsna.org/rmdo/RMDO_03467>
     
     
 DisjointClasses: 
