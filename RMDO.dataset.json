@@ -1,0 +1,152 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.dataset.json",
+	"title": "Model",
+	"description": "Description of each Dataset",
+	"type": "object",
+	"properties": {
+		"Details": {
+			"$ref": "RMDO.descriptor.json"
+		},
+		"Labeling": {
+			"description": "Is there a label or target associated with each instance? If so, please provide a description.",
+			"$comment": "RMDO:03407",
+			"type": "string"
+		},
+		"Missing information": {
+			"description": "Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (for example, because it was unavailable). This does not include intentionally removed information, but might include, for example, redacted text.",
+			"$comment": "RMDO:03408",
+			"type": "string"
+		},
+		"Relationships between instances": {
+			"description": "Are relationships between individual instances made explicit (for example, social network links)? If so, please describe how these relationships are made explicit.",
+			"$comment": "RMDO:03409",
+			"type": "string"
+		},
+		"Noise": {
+			"description": "Describe any errors, sources of noise, or redundancies in the dataset.",
+			"$comment": "RMDO:03411",
+			"type": "string"
+		},
+		"External data": {
+			"description": "Is the dataset self-contained, or does it link to or otherwise rely on external resources (for example, websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (that is, including the external resources as they existed at the time the dataset was created); c) are there any restrictions (for example, licenses, fees) associated with any of the external resources that might apply to a dataset consumer? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.",
+			"$comment": "RMDO:03412",
+			"type": "string"
+		},
+		"Confidentiality": {
+			"description": "Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)? If so, please provide a description.",
+			"$comment": "RMDO:03413",
+			"type": "string"
+		},
+		"Subpopulations": {
+			"$comment": "RMDO:03414",
+			"type": "string"
+		},
+		"Re-identification": {
+			"$comment": "RMDO:03415",
+			"type": "string"
+		},
+		"Sensitive data": {
+			"$comment": "RMDO:03416",
+			"type": "string"
+		},
+		"Collection process": {
+			"description": "Dataset collection process",
+			"$comment": "RMDO:03417",
+			"type": "string"
+		},
+		"Composition": {
+			"$comment": "RMDO:03388",
+			"type": "object",
+			"properties": {
+				"Confidentiality": {
+					"description": "Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)? If so, please provide a description.",
+					"$comment": "RMDO:03413",
+					"type": "string"
+				},
+				"Data type": {
+					"description": "What do the instances that comprise the dataset represent (for example, documents, photos, people, countries)? Are there multiple types of instances (for example, movies, users, and ratings; people and interactions between them; nodes and edges)?",
+					"$comment": "RMDO:03389",
+					"type": "array",
+					"enum": [
+						"Report text",
+						"Image",
+						"Medical record data",
+						"Photograph",
+						"Graph"
+					]
+				},
+				"Number of instances": {
+					"type": "integer"
+				},
+				"Representativeness": {
+					"type": "object",
+					"properties": {
+						"Sample type": {
+							"type": "array",
+							"enum": [
+								"Complete population",
+								"Random sample",
+								"Convenience sample",
+								"Non-random sample",
+								"Other"
+							]
+						},
+						"Population": {
+							"$comment": "RMDO:03401",
+							"type": "string"
+						},
+						"Verification": {
+							"description": "Verification of representativeness",
+							"$comment": "RMDO:03402",
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				}
+			}
+		},
+		"Motivation": {
+			"description": "The following questions are primarily intended to encourage dataset creators to clearly articulate their reasons for creating the dataset and to promote transparency about funding interests. The latter may be particularly relevant for datasets created for research purposes.",
+			"$comment": "RMDO:03383",
+			"type": "object",
+			"properties": {
+				"Purpose": {
+					"description": "For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled?",
+					"$comment": "RMDO:03384",
+					"type": "string"
+				},
+				"Team": {
+					"description": "Who created the dataset (for example, which team, research group) and on behalf of which entity (for example, company, institution, organization)?",
+					"$comment": "RMDO:03386",
+					"type": "string"
+				},
+				"Funding": {
+					"description": "Specify grantor, grant name, and number.",
+					"$comment": "RMDO:03385",
+					"type": "string"
+				},
+				"Comments": {
+					"description": "Dataset motivation comments",
+					"$comment": "RMDO:03387",
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Partioning scheme": {
+			"description": "Overall approach to partition the dataset, if applicable. For example: 70% training, 20% optimization, 10% testing. The Partitions array provides detail about each partition.",
+			"type": "string"
+		},
+		"Partitions": {
+			"description": "Array to describe characteristics",
+			"$comment": "RMDO:03410",
+			"type": "array"
+		}
+	},
+	"required": [
+		"Details"
+	],
+	"additionalProperties": false,
+	"id": "RMDO:00002"
+}

@@ -1,0 +1,209 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.descriptor.json",
+	"description": "Details for Project, Model, and Dataset entities",
+	"type": "object",
+	"properties": {
+		"Persons": {
+			"description": "Array of individual persons",
+			"$comment": "Person (RMDO:00071), Author (RMDO:00064), Contributor (RMDO:03471)",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "Information about each person",
+				"properties": {
+					"Name": {
+						"description": "The person's name",
+						"type": "string"
+					},
+					"Role": {
+						"type": "string",
+						"description": "The individual's role",
+						"enum": [
+							"Author",
+							"Contributor"
+						]
+					},
+					"Email": {
+						"type": "string",
+						"format": "email"
+					},
+					"Address": {
+						"description": "Person's physical (real-world) address",
+						"type": "string"
+					},
+					"ORCID": {
+						"type": "string",
+						"description": "Unique ORCID (Open Researcher and Contributor ID) dentifier",
+						"pattern": "https://orcid.org/.*",
+						"format": "uri-template",
+						"examples": [
+							"https://orcid.org/0000-0000-0000-0000"
+						]
+					},
+					"URL": {
+						"type": "string",
+						"format": "uri"
+					}
+				},
+				"required": [
+					"Name",
+					"Role"
+				]
+			}
+		},
+		"Organizations": {
+			"description": "Organizations that developed and/or sponsored the resource",
+			"$comment": "Organization (RMDO:00072)",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"Name": {
+						"description": "Name of organization",
+						"type": "string"
+					},
+					"Contact name": {
+						"description": "Name or role of organizational contact",
+						"type": "string"
+					},
+					"Email": {
+						"type": "string",
+						"format": "email"
+					},
+					"Address": {
+						"description": "Organizations's physical (real-world) address",
+						"type": "string"
+					},
+					"URL": {
+						"type": "string",
+						"format": "uri"
+					}
+				},
+				"required": [
+					"Name"
+				]
+			}
+		},
+		"Date": {
+			"type": "object",
+			"properties": {
+				"Created": {
+					"description": "Creation date",
+					"type": "string",
+					"format": "date",
+					"$comment": "RMDO:03419"
+				},
+				"Published": {
+					"description": "Publication date",
+					"type": "string",
+					"format": "date",
+					"$comment": "RMDO:03420"
+				},
+				"Updated": {
+					"description": "Date of last update",
+					"type": "string",
+					"format": "date",
+					"$comment": "RMDO:03421"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Version": {
+			"$comment": "RMDO:00066",
+			"description": "Version designation of this resource",
+			"type": "string"
+		},
+		"References": {
+			"$comment": "RMDO:00067",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"Authors": {
+						"description": "Reference authors",
+						"type": "string",
+						"examples": [
+							"Rudie JD, et al."
+						]
+					},
+					"Title": {
+						"description": "Reference title",
+						"type": "string",
+						"examples": [
+							"The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset"
+						]
+					},
+					"Source": {
+						"description": "Name of journal, book, or other source",
+						"type": "string",
+						"examples": [
+							"Radiology: Artificial Intelligence"
+						]
+					},
+					"Year": {
+						"$comment": "By 2100, you'll need to update this schema! ;-)",
+						"type": "integer",
+						"minimum": 1900,
+						"maximum": 2100,
+						"examples": [
+							2024
+						]
+					},
+					"DOI": {
+						"description": "Digital Object Identifer (DOI)",
+						"type": "string",
+						"examples": [
+							"10.1148/ryai.240101"
+						]
+					},
+					"URL": {
+						"description": "Pointer to online reference",
+						"type": "string",
+						"format": "uri",
+						"examples": [
+							"https://doi.org/10.1148/ryai.240101"
+						]
+					},
+					"PMID": {
+						"description": "PubMed ID",
+						"type": "integer",
+						"examples": [
+							39441109
+						]
+					},
+					"PMCID": {
+						"description": "PubMed Central ID",
+						"type": "integer"
+					}
+				}
+			}
+		},
+		"License": {
+			"$comment": "RMDO:00068",
+			"description": "License or rights to access this resource",
+			"type": "string",
+			"examples": [
+				"CC BY 4.0",
+				"CC BY-NC-ND"
+			]
+		},
+		"Contact": {
+			"$comment": "RMDO:00069",
+			"type": "string"
+		},
+		"Comments": {
+			"$comment": "RMDO:00070",
+			"type": "string"
+		},
+		"Funding": {
+			"$comment": "RMDO:03385",
+			"type": "string"
+		},
+		"Ethical review": {
+			"$comment": "RMDO:03418",
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}
