@@ -3,10 +3,25 @@
 	"$id": "RMDO.dataset.json",
 	"title": "Model",
 	"description": "Description of each Dataset",
+	"$comment": "RMDO:00002",
 	"type": "object",
 	"properties": {
+		"Name": {
+			"type": "string"
+		},
 		"Details": {
 			"$ref": "RMDO.descriptor.json"
+		},
+		"Role": {
+			"type": "string",
+			"enum": [
+				"Training",
+				"Optimization",
+				"Testing",
+				"Internal testing",
+				"External testing"
+			],
+			"description": "If partitions are not described, indicate the role of the dataset. If the dataset has partitions, list them with the Partitions tag."
 		},
 		"Labeling": {
 			"description": "Is there a label or target associated with each instance? If so, please provide a description.",
@@ -39,10 +54,12 @@
 			"type": "string"
 		},
 		"Subpopulations": {
+			"description": "Does the dataset identify any subpopulations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.",
 			"$comment": "RMDO:03414",
 			"type": "string"
 		},
 		"Re-identification": {
+			"description": "Is it possible to identify individuals (that is, one or more natural persons), either directly or indirectly (that is, in combination with other data) from the dataset? If so, please describe how.",
 			"$comment": "RMDO:03415",
 			"type": "string"
 		},
@@ -145,8 +162,8 @@
 		}
 	},
 	"required": [
+		"Name",
 		"Details"
 	],
-	"additionalProperties": false,
-	"id": "RMDO:00002"
+	"additionalProperties": false
 }

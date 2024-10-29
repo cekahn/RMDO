@@ -4,21 +4,40 @@
 	"description": "Details for Project, Model, and Dataset entities",
 	"type": "object",
 	"properties": {
+		"Content codes": {
+			"description": "RSNA content codes",
+			"$ref": "RMDO.content-code.json#"
+		},
+		"RadLex codes": {
+			"description": "RadLex codes",
+			"$comment": "RMDO:00117",
+			"type": "array",
+			"items": {
+				"description": "RadLex codes; pointers to https://radlex.org/{code}",
+				"$comment": "RMDO:00117",
+				"type": "string",
+				"pattern": "RID[0-9]+",
+				"examples": [
+					"RID35",
+					"RID1151"
+				]
+			}
+		},
 		"Persons": {
 			"description": "Array of individual persons",
 			"$comment": "Person (RMDO:00071), Author (RMDO:00064), Contributor (RMDO:03471)",
 			"type": "array",
 			"items": {
-				"type": "object",
 				"description": "Information about each person",
+				"type": "object",
 				"properties": {
 					"Name": {
 						"description": "The person's name",
 						"type": "string"
 					},
 					"Role": {
-						"type": "string",
 						"description": "The individual's role",
+						"type": "string",
 						"enum": [
 							"Author",
 							"Contributor"
@@ -33,8 +52,8 @@
 						"type": "string"
 					},
 					"ORCID": {
-						"type": "string",
 						"description": "Unique ORCID (Open Researcher and Contributor ID) dentifier",
+						"type": "string",
 						"pattern": "https://orcid.org/.*",
 						"format": "uri-template",
 						"examples": [
@@ -49,7 +68,8 @@
 				"required": [
 					"Name",
 					"Role"
-				]
+				],
+				"additionalProperties": false
 			}
 		},
 		"Organizations": {
@@ -82,7 +102,8 @@
 				},
 				"required": [
 					"Name"
-				]
+				],
+				"additionalProperties": false
 			}
 		},
 		"Date": {
@@ -90,28 +111,28 @@
 			"properties": {
 				"Created": {
 					"description": "Creation date",
+					"$comment": "RMDO:03419",
 					"type": "string",
-					"format": "date",
-					"$comment": "RMDO:03419"
+					"format": "date"
 				},
 				"Published": {
 					"description": "Publication date",
+					"$comment": "RMDO:03420",
 					"type": "string",
-					"format": "date",
-					"$comment": "RMDO:03420"
+					"format": "date"
 				},
 				"Updated": {
 					"description": "Date of last update",
+					"$comment": "RMDO:03421",
 					"type": "string",
-					"format": "date",
-					"$comment": "RMDO:03421"
+					"format": "date"
 				}
 			},
 			"additionalProperties": false
 		},
 		"Version": {
-			"$comment": "RMDO:00066",
 			"description": "Version designation of this resource",
+			"$comment": "RMDO:00066",
 			"type": "string"
 		},
 		"References": {
@@ -176,12 +197,13 @@
 						"description": "PubMed Central ID",
 						"type": "integer"
 					}
-				}
+				},
+				"additionalProperties": false
 			}
 		},
 		"License": {
-			"$comment": "RMDO:00068",
 			"description": "License or rights to access this resource",
+			"$comment": "RMDO:00068",
 			"type": "string",
 			"examples": [
 				"CC BY 4.0",
@@ -192,16 +214,16 @@
 			"$comment": "RMDO:00069",
 			"type": "string"
 		},
-		"Comments": {
-			"$comment": "RMDO:00070",
-			"type": "string"
-		},
 		"Funding": {
 			"$comment": "RMDO:03385",
 			"type": "string"
 		},
 		"Ethical review": {
 			"$comment": "RMDO:03418",
+			"type": "string"
+		},
+		"Comments": {
+			"$comment": "RMDO:00070",
 			"type": "string"
 		}
 	},

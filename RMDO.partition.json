@@ -1,0 +1,126 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.partition.json",
+	"description": "Description of each partition",
+	"type": "object",
+	"properties": {
+		"Role": {
+			"type": "string",
+			"enum": [
+				"Training",
+				"Optimization",
+				"Testing",
+				"Internal testing",
+				"External testing"
+			]
+		},
+		"Features": {
+			"$comment": "RMDO:03385",
+			"type": "object",
+			"properties": {
+				"Count": {
+					"type": "object",
+					"minProperties": 1,
+					"properties": {
+						"Patients": {
+							"type": "integer"
+						},
+						"Exams": {
+							"type": "integer"
+						},
+						"Images": {
+							"type": "integer"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Age": {
+					"type": "object",
+					"additionalProperties": false,
+					"oneOf": [
+						{
+							"title": "Group",
+							"type": "string"
+						},
+						{
+							"title": "Range",
+							"type": "object",
+							"properties": {
+								"Lower bound": {
+									"type": "array",
+									"minItems": 2,
+									"maxItems": 2,
+									"items": [
+										{
+											"type": "integer"
+										},
+										{
+											"type": "string",
+											"enum": [
+												"days",
+												"months",
+												"years"
+											]
+										}
+									]
+								},
+								"Upper bound": {
+									"type": "array",
+									"minItems": 2,
+									"maxItems": 2,
+									"items": [
+										{
+											"type": "integer"
+										},
+										{
+											"type": "string",
+											"enum": [
+												"days",
+												"months",
+												"years"
+											]
+										}
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"Sex": {
+					"type": "string",
+					"enum": [
+						"Female",
+						"Male",
+						"Unknown",
+						"Not specified"
+					]
+				},
+				"Race / ethnicity": {
+					"description": "Race / ethnicity (U.S. reporting categories)",
+					"$comment": "Race / ethnicity (RMDO:03441): American Indian or Alaska Native (RMDO:03448), Asian (RMDO:03442), Black or African American (RMDO:03443), Hispanic or Latino (RMDO:03444), Middle Eastern or North African (RMDO:03445), Native Hawaiian or Pacific Islander (RMDO:03446), White (RMDO:03447)",
+					"type": "string",
+					"enum": [
+						"American Indian or Alaska Native",
+						"Asian",
+						"Black or African American",
+						"Hispanic or Latino",
+						"Middle Eastern or North African",
+						"Native Hawaiian or Pacific Islander",
+						"White"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"Subsets": {
+			"description": "[UNDER CONSTRUCTION] : Subsets will be an array to allow one to specify subsets of the entire dataset or of its partitions by age, sex, and/or race.",
+			"$comment": "RMDO:03418"
+		},
+		"Comments": {
+			"$comment": "RMDO:00070",
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}
