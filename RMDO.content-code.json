@@ -3,7 +3,7 @@
 	"$id": "RMDO.content-code.json",
 	"title": "Content code",
 	"description": "RSNA content codes",
-	"$comment": "Content code (RMDO:00073), AI Artificial Intelligence (RMDO:00081), BR Breast Imaging and Intervention (RMDO:00082), BQ Biomarkers / Quantitative Imaging (RMDO:00083), CA Cardiac Radiology (RMDO:00084), CH Chest Radiology (RMDO:00085), CT Computed Tomography (RMDO:00086), DM Digital Mammography (RMDO:00087), ED Education (RMDO:00088), ER Emergency Radiology (RMDO:00089), GI Gastrointestinal Radiology (RMDO:00090), GU Genitourinary Radiology (RMDO:00091), HN Head and Neck Radiology (RMDO:00092), HP Health Policy (RMDO:00093), IN Informatics (RMDO:00094), IR Interventional Radiology (RMDO:00095), LM Leadership & Management (RMDO:00096), MI Molecular Imaging (RMDO:00097), MK Musculoskeletal Radiology (RMDO:00098), MR Magnetic Resonance Imaging (RMDO:00099), NM Nuclear Medicine (RMDO:00100), NR Neuroradiology (RMDO:00101), OB Obstetric/Gynecologic Radiology (RMDO:00102), OI Oncologic Imaging (RMDO:00103), OT Other (RMDO:00104), PD Pediatric Radiology (RMDO:00105), PH Physics and Basic Science (RMDO:00106), PR Professionalism (including Ethics) (RMDO:00107), SQ Safety and Quality (RMDO:00108), RO Radiation Oncology (RMDO:00109), RS Research and Statistical Methods (RMDO:00110), US Ultrasound (RMDO:00111), VA Vascular Imaging (RMDO:00112)",
+	"$comment": "RMDO:00073",
 	"type": "array",
 	"uniqueItems": true,
 	"items": {
@@ -47,5 +47,6 @@
 			"CT",
 			"GI"
 		]
-	}
+	},
+	"additionalItems": false
 }
