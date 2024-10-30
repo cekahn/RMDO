@@ -13,6 +13,7 @@
 			"$ref": "RMDO.descriptor.json"
 		},
 		"Role": {
+			"description": "If partitions are not described, indicate the role of the dataset. If the dataset has partitions, list them with the Partitions tag.",
 			"type": "string",
 			"enum": [
 				"Training",
@@ -20,8 +21,7 @@
 				"Testing",
 				"Internal testing",
 				"External testing"
-			],
-			"description": "If partitions are not described, indicate the role of the dataset. If the dataset has partitions, list them with the Partitions tag."
+			]
 		},
 		"Labeling": {
 			"description": "Is there a label or target associated with each instance? If so, please provide a description.",
@@ -158,12 +158,21 @@
 		"Partitions": {
 			"description": "Array to describe characteristics",
 			"$comment": "RMDO:03410",
-			"type": "array"
+			"type": "array",
+			"items": {
+				"$ref": "RMDO.partition.json#"
+			}
+		},
+		"Subset": {
+			"type": "array",
+			"items": {
+				"$ref": "RMDO.subset.json#"
+			}
 		}
 	},
 	"required": [
 		"Name",
-		"Details"
+		"Role"
 	],
 	"additionalProperties": false
 }
