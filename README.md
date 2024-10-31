@@ -6,7 +6,9 @@ This repository contains draft versions of an ontology to describe radiology AI 
 The key documents are:
 
 * the draft ontology [RMDO.omn]
-  - (The XML version may not be current)
+  - Note: The XML version may not be current
     
 * the JSON Schema [RMDO.json]
-  - (The other schema documents are referenced from this one)
+  - The other schema documents are referenced from this one
+ 
+* A presentation given at the CMIMI 2024 meeting [CMIMI 2024 - RMDO.pptx]
