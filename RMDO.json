@@ -9,6 +9,9 @@
 		"Project": {
 			"type": "object",
 			"properties": {
+				"Name": {
+					"type": "string"
+				},
 				"Details": {
 					"$ref": "RMDO.descriptor.json"
 				}
