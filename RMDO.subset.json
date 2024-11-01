@@ -130,5 +130,32 @@
 	"required": [
 		"Count"
 	],
-	"additionalProperties": false
+	"additionalProperties": false,
+	"examples": [
+		{
+			"count": {
+				"Patients": 501
+			},
+			"Sex": "Female"
+		},
+		{
+			"count": {
+				"Patients": 42,
+				"Exams": 50,
+				"Images": 572
+			},
+			"Age range": [
+				[
+					50,
+					"years"
+				],
+				[
+					59,
+					"years"
+				]
+			],
+			"Sex": "Male",
+			"Demographics": "Asian"
+		}
+	]
 }

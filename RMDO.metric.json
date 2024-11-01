@@ -2,9 +2,10 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "RMDO.metric.json",
 	"title": "Metric",
-	"id": "RMDO:03302",
 	"description": "Model performance metric",
+	"$comment": "RMDO:03302",
 	"type": "array",
+	"uniqueItems": true,
 	"items": {
 		"type": "string",
 		"enum": [
@@ -55,6 +56,10 @@
 			"True negative rate",
 			"True positive rate",
 			"Weighted Cohen's kappa"
+		],
+		"examples": [
+			"Precision",
+			"Recall"
 		]
 	}
 }

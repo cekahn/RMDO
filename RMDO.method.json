@@ -2,8 +2,8 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "RMDO.method.json",
 	"title": "Method",
-	"$comment": "RMDO:00118",
 	"description": "Papers With Code (https://paperswithcode.com/) Methods hierarchy as of 2024-04-30",
+	"$comment": "RMDO:00118",
 	"type": "string",
 	"enum": [
 		"(2+1)D Convolution",
@@ -2584,5 +2584,9 @@
 		"ZFNet",
 		"Zoneout",
 		"ZoomNet"
+	],
+	"examples": [
+		"Contrastive Learning",
+		"UNet++"
 	]
 }

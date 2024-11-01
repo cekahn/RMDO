@@ -12,19 +12,20 @@
 			"description": "RadLex codes",
 			"$comment": "RMDO:00117",
 			"type": "array",
+			"uniqueItems": true,
 			"items": {
-				"description": "RadLex codes; pointers to https://radlex.org/{code}",
+				"description": "RadLex codes; pointers to https://radlex.org/RID/{code}",
 				"$comment": "RMDO:00117",
 				"type": "string",
 				"pattern": "RID[0-9]+",
 				"examples": [
-					"RID35",
-					"RID1151"
+					"RID58",
+					"RID1169"
 				]
 			}
 		},
 		"Persons": {
-			"description": "Array of individual persons",
+			"description": "Individual authors and contributors",
 			"$comment": "Person (RMDO:00071), Author (RMDO:00064), Contributor (RMDO:03471)",
 			"type": "array",
 			"items": {

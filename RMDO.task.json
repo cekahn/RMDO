@@ -2,8 +2,8 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "RMDO.task.json",
 	"title": "Task",
-	"$comment": "RMDO:00119",
 	"description": "Papers With Code (https://paperswithcode.com/) Tasks listing as of 2024-04-30",
+	"$comment": "RMDO:00119",
 	"type": "string",
 	"enum": [
 		"2D Human Pose Estimation",
@@ -505,5 +505,9 @@
 		"Zero-shot Text Search",
 		"Zero-Shot Transfer Image Classification",
 		"Zero-Shot Video Question Answer"
+	],
+	"examples": [
+		"3D Semantic Segmentation",
+		"Semi-Supervised Image Classification"
 	]
 }

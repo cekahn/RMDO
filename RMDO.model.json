@@ -6,6 +6,10 @@
 	"$comment": "RMDO:00002",
 	"type": "object",
 	"properties": {
+		"Name": {
+			"description": "Model name",
+			"type": "string"
+		},
 		"Details": {
 			"$ref": "RMDO.descriptor.json"
 		},
@@ -15,17 +19,29 @@
 				"Intended": {
 					"description": "Intended model use",
 					"$comment": "RMDO:00012",
-					"$ref": "RMDO.use.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
 				},
 				"Out-of-scope": {
 					"description": "Out-of-scope model use",
 					"$comment": "RMDO:00013",
-					"$ref": "RMDO.use.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
 				},
 				"Excluded": {
 					"description": "Excluded model use",
 					"$comment": "RMDO:00014",
-					"$ref": "RMDO.use.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
 				}
 			},
 			"additionalProperties": false
@@ -36,17 +52,29 @@
 				"Intended": {
 					"description": "Intended model user",
 					"$comment": "RMDO:00037",
-					"$ref": "RMDO.user.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
 				},
 				"Out-of-scope": {
 					"description": "Out-of-scope model user",
 					"$comment": "RMDO:00038",
-					"$ref": "RMDO.user.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
 				},
 				"Excluded": {
 					"description": "Excluded model user",
 					"$comment": "RMDO:00039",
-					"$ref": "RMDO.user.json"
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
 				}
 			},
 			"additionalProperties": false
@@ -104,6 +132,7 @@
 			"description": "Relevant machine-learning methods, from Papers With Code",
 			"$comment": "RMDO:00118",
 			"type": "array",
+			"uniqueItems": true,
 			"items": {
 				"$ref": "RMDO.method.json#"
 			}
@@ -112,13 +141,14 @@
 			"description": "Tasks to which the model is applied, from Papers With Code",
 			"$comment": "RMDO:00119",
 			"type": "array",
+			"uniqueItems": true,
 			"items": {
 				"$ref": "RMDO.task.json#"
 			}
 		}
 	},
 	"required": [
-		"Details"
+		"Name"
 	],
 	"additionalProperties": false
 }
