@@ -5,10 +5,10 @@ This repository contains draft versions of an ontology to describe radiology AI 
 
 The key documents are:
 
-* the draft ontology [RMDO.omn]
+* the [ontology](RMDO.omn) in Manchester OWL syntax -- open with Protege
   - Note: The XML version may not be current
     
-* the JSON Schema [RMDO.json]
+* the top-level [JSON Schema](RMDO.json) document
   - The other schema documents are referenced from this one
  
-* A presentation given at the CMIMI 2024 meeting [CMIMI 2024 - RMDO.pptx]
+* A [presentation](CMIMI%202024%20-%20RMDO.pptx) given at the CMIMI 2024 meeting
