@@ -8,11 +8,11 @@ The key documents are:
 
 ## Ontology
 
-* the [ontology](RMDO.omn) in Manchester OWL syntax (open with Prot&eacute;g&eacute;)
+* The [ontology](RMDO.omn) in Manchester OWL syntax (open with Prot&eacute;g&eacute;)
   - Note: The XML version may not be current
 
-* a text-document [outline](RMDO-outline.txt)
-  - (Methods)[RMDO-outline-Methods.txt] and (Tasks)[RMDO-outline-Tasks.txt] from Papers With Code
+* Text-document [outline](RMDO-outline.txt)
+  - Outlines of [Methods](RMDO-outline-Methods.txt) and [Tasks](RMDO-outline-Tasks.txt) entities from Papers With Code
 
 ## JSON Schema
 
