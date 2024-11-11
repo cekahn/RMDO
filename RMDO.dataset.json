@@ -12,16 +12,159 @@
 		"Details": {
 			"$ref": "RMDO.descriptor.json"
 		},
-		"Role": {
-			"description": "If partitions are not described, indicate the role of the dataset. If the dataset has partitions, list them with the Partitions tag.",
-			"type": "string",
-			"enum": [
-				"Training",
-				"Optimization",
-				"Testing",
-				"Internal testing",
-				"External testing"
-			]
+		"Imaging": {
+			"type": "object",
+			"properties": {
+				"Modality": {
+					"type": "array",
+					"items": {
+						"description": "Imaging modality; requires a value from RadLex (RID10311)",
+						"$comment": "RMDO:00120, RadLex:RID10311",
+						"type": "string",
+						"enum": [
+							"3-Dimensional ultrasound (RID10920)",
+							"4-Dimensional CT (RID38755)",
+							"4-Dimensional ultrasound (RID10926)",
+							"A-mode ultrasound (RID10903)",
+							"B-mode ultrasound (RID10904)",
+							"Bremsstrahlung imaging (RID10336)",
+							"C-mode ultrasound (RID10907)",
+							"Color doppler mode (RID10909)",
+							"Combined modalities (RID49580)",
+							"Computed radiography (RID10349)",
+							"Computed tomography (RID10321)",
+							"Conventional tomography (RID10358)",
+							"Diffusion tensor imaging (RID38778)",
+							"Digital radiography (RID10351)",
+							"Doppler mode (RID10908)",
+							"Dual energy xray absorptiometry (RID10363)",
+							"Dual-energy CT (RID38660)",
+							"Dual-energy subtraction radiography (RID10356)",
+							"Duplex ultrasound (RID10922)",
+							"Dynamic contrast-enhanced magnetic resonance imaging (RID49531)",
+							"Elastography (RID10932)",
+							"Extended field-of-view ultrasound (RID10924)",
+							"Fluoroscopy (RID10361)",
+							"Functional magnetic resonance imaging (RID10317)",
+							"Harmonic ultrasound (RID10913)",
+							"High intensity pulse (RID10919)",
+							"High-energy scan (RID12412)",
+							"Low intensity pulse (RID10918)",
+							"Low-energy scan (RID12411)",
+							"MR fluoroscopy (RID11071)",
+							"Magnetic resonance angiography (RID10319)",
+							"Magnetic resonance imaging (RID10312)",
+							"Magnetic resonance spectroscopy (RID10315)",
+							"Mammography (RID10357)",
+							"Molecular imaging (RID12508)",
+							"Nuclear medicine imaging (RID10330)",
+							"Other modality (dicom) (RID49585)",
+							"PET-CT (RID10341)",
+							"PET-MR (RID10342)",
+							"Panographic radiograph (RID10360)",
+							"Phase-cancellation harmonic ultrasound (RID10914)",
+							"Planar nuclear medicine imaging (RID10333)",
+							"Positron emission tomography (RID10337)",
+							"Power doppler mode (RID10910)",
+							"Projection radiography (RID10345)",
+							"Quantitative computed tomography (RID10323)",
+							"Radiofluoroscopy (RID45709)",
+							"SPECT-CT (RID49583)",
+							"Scintigraphy (RID34428)",
+							"Screen-film radiography (RID10353)",
+							"Single photon emission computed tomography (RID10334)",
+							"Single photon imaging (RID10332)",
+							"Spectral doppler mode (RID10911)",
+							"Spectroscopy (RID10377)",
+							"Stereoscopy (RID50131)",
+							"Stereotactic radiography (RID50260)",
+							"Stimulated acoustic emission (RID10916)",
+							"Strain imaging (RID10933)",
+							"Tomography (RID28840)",
+							"Tomosynthesis (RID10359)",
+							"Triplex ultrasound (RID10923)",
+							"US-RF (RID49581)",
+							"Ultrasound (RID10326)",
+							"Volume imaging (RID10930)",
+							"XR-RF (RID49582)"
+						]
+					}
+				},
+				"Procedure": {
+					"description": "Imaging procedures, from LOINC/RSNA Radiology Playbook",
+					"$comment": "Imaging procedure (RMDO:00121)\r\n",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"minProperties": 1,
+						"maxProperties": 3,
+						"properties": {
+							"LOINC": {
+								"type": "string",
+								"examples": [
+									"36813-4"
+								]
+							},
+							"RadLex": {
+								"type": "string",
+								"minLength": 5,
+								"maxLength": 10,
+								"pattern": "RPID[0-9]+",
+								"examples": [
+									"RPID145"
+								]
+							},
+							"Name": {
+								"type": "string",
+								"examples": [
+									"CT Abdomen and Pelvis W contrast IV"
+								]
+							}
+						},
+						"additionalProperties": false,
+						"examples": [
+							{
+								"LOINC": "36623-7",
+								"Name": "XR Hand - left PA"
+							},
+							{
+								"LOINC": "36813-4",
+								"RadLex": "RPID145",
+								"Name": "CT Abdomen and Pelvis W contrast IV"
+							}
+						]
+					}
+				},
+				"File format": {
+					"description": "Image file format",
+					"$comment": "Image file format (RMDO:00059): DICOM (RMDO:00060), PNG (RMDO:00061), JPEG (RMDO:00062), NiFTI (RMDO:00063)",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"DICOM",
+							"JPEG",
+							"NiFTI",
+							"PNG",
+							"Other"
+						]
+					}
+				},
+				"Resolution": {
+					"type": "string"
+				},
+				"Pre-processing": {
+					"type": "string"
+				},
+				"Burned-in PHI": {
+					"type": "string",
+					"enum": [
+						"Yes",
+						"No",
+						"Unknown"
+					]
+				}
+			}
 		},
 		"Labeling": {
 			"description": "Is there a label or target associated with each instance? If so, please provide a description.",
@@ -158,12 +301,32 @@
 		"Partitions": {
 			"description": "Array to describe characteristics",
 			"$comment": "RMDO:03410",
-			"type": "array",
-			"items": {
-				"$ref": "RMDO.partition.json#"
+			"type": "object",
+			"properties": {
+				"Training": {
+					"$ref": "RMDO.subset.json#"
+				},
+				"Optimization": {
+					"$ref": "RMDO.subset.json#"
+				},
+				"Validation": {
+					"$ref": "RMDO.subset.json#"
+				},
+				"Testing": {
+					"$ref": "RMDO.subset.json#"
+				},
+				"Internal testing": {
+					"$ref": "RMDO.subset.json#"
+				},
+				"External testing": {
+					"$ref": "RMDO.subset.json#"
+				}
+			},
+			"additionalProperties": {
+				"$ref": "RMDO.subset.json#"
 			}
 		},
-		"Subset": {
+		"Subsets": {
 			"type": "array",
 			"items": {
 				"$ref": "RMDO.subset.json#"
@@ -171,8 +334,7 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Role"
+		"Name"
 	],
 	"additionalProperties": false
 }

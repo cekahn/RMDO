@@ -54,6 +54,9 @@ Datatype: rdf:PlainLiteral
 Datatype: xsd:anyURI
 
     
+Datatype: xsd:dateTime
+
+    
 Datatype: xsd:nonNegativeInteger
 
     
@@ -206,6 +209,7 @@ Class: rmdo:RMDO_00002
         rmdo:RMDO_00116 some rmdo:RMDO_00004,
         rmdo:RMDO_00629 some rmdo:RMDO_00011,
         rmdo:RMDO_00630 some rmdo:RMDO_00036,
+        rmdo:RMDO_00631 some rmdo:RMDO_00074,
         rmdo:RMDO_03300 some rmdo:RMDO_00118,
         rmdo:RMDO_03301 some rmdo:RMDO_00119,
         rmdo:RMDO_03350 some rmdo:RMDO_03355
@@ -218,7 +222,9 @@ Class: rmdo:RMDO_00003
         rdfs:label "Dataset"
     
     SubClassOf: 
-        rmdo:RMDO_00001
+        rmdo:RMDO_00001,
+        rmdo:RMDO_00631 some rmdo:RMDO_00074,
+        rmdo:RMDO_03382 some rmdo:RMDO_03381
     
     
 Class: rmdo:RMDO_00004
@@ -300,7 +306,8 @@ Thus, a Project can encapsulate a model and its data, a model only, or a dataset
         rmdo:RMDO_00001,
         rmdo:RMDO_00114 some rmdo:RMDO_00002,
         rmdo:RMDO_00115 some rmdo:RMDO_00003,
-        rmdo:RMDO_00116 some rmdo:RMDO_00004
+        rmdo:RMDO_00116 some rmdo:RMDO_00004,
+        rmdo:RMDO_00631 some rmdo:RMDO_00074
     
     
 Class: rmdo:RMDO_00011
@@ -771,11 +778,11 @@ Class: rmdo:RMDO_00056
 Class: rmdo:RMDO_00057
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Exam count"@en,
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Number of exams"@en,
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Number of studies"@en,
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Study count"@en,
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00057",
-        rdfs:label "Study count"
+        rdfs:label "Exam count"@en
     
     SubClassOf: 
         rmdo:RMDO_00055
@@ -854,10 +861,11 @@ Class: rmdo:RMDO_00064
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00064",
+        rdfs:comment "Individual author.",
         rdfs:label "Author"
     
     SubClassOf: 
-        rmdo:RMDO_00004
+        rmdo:RMDO_00071
     
     
 Class: rmdo:RMDO_00065
@@ -867,7 +875,8 @@ Class: rmdo:RMDO_00065
         rdfs:label "Date"
     
     SubClassOf: 
-        rmdo:RMDO_00004
+        rmdo:RMDO_00004,
+        owl:topDataProperty some xsd:dateTime
     
     
 Class: rmdo:RMDO_00066
@@ -924,21 +933,22 @@ Class: rmdo:RMDO_00071
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00071",
-        rdfs:comment "An individual (human) author.  Ideally should have a link to a unique identifier such as the ORCiD identifier.",
-        rdfs:label "Individual author"
+        rdfs:comment "An individual human author or contributor.  Ideally should have a link to a unique identifier such as the ORCID identifier."@en,
+        rdfs:label "Person"@en
     
     SubClassOf: 
-        rmdo:RMDO_00064
+        rmdo:RMDO_00004
     
     
 Class: rmdo:RMDO_00072
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00072",
-        rdfs:label "Organizational author"
+        rdfs:comment "An organizational entity that developed and/or supported the resource."@en,
+        rdfs:label "Organization"
     
     SubClassOf: 
-        rmdo:RMDO_00064
+        rmdo:RMDO_00004
     
     
 Class: rmdo:RMDO_00073
@@ -37639,7 +37649,7 @@ Class: rmdo:RMDO_03420
 Class: rmdo:RMDO_03421
 
     Annotations: 
-        rdfs:label "Date of last update"@en
+        rdfs:label "Update date"@en
     
     SubClassOf: 
         rmdo:RMDO_00065
@@ -37842,6 +37852,7 @@ Class: rmdo:RMDO_03440
 Class: rmdo:RMDO_03441
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Race / ethnicity",
         rdfs:comment "Asian:
 
 Chinese, Asian Indian, Filipino, Vietnamese, Korean, and Japanese, Another group (for example, Pakistani, Hmong, Afghan, etc.)
@@ -37865,7 +37876,7 @@ Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese, Another group (f
 White:
 
 English, German, Irish, Italian, Polish, Scottish, Another group (for example, French, Swedish, Norwegian, etc.)"@en,
-        rdfs:label "Race / ethnicity"@en
+        rdfs:label "Demographic group"@en
     
     SubClassOf: 
         rmdo:RMDO_03422
@@ -37984,7 +37995,7 @@ MeSH definition:  A person 6 to 12 years of age. An individual 2 to 5 years old 
 Class: rmdo:RMDO_03452
 
     Annotations: 
-        rdfs:isDefinedBy "A child between 1 and 23 months of age.",
+        rdfs:isDefinedBy "An individual less than 2 years of age."@en,
         rdfs:label "Infant"@en
     
     SubClassOf: 
@@ -38112,19 +38123,21 @@ Class: rmdo:RMDO_03463
 Class: rmdo:RMDO_03464
 
     Annotations: 
-        rdfs:label "Age minimum"@en
+        rdfs:label "Age lower bound"@en
     
     SubClassOf: 
-        rmdo:RMDO_03462
+        rmdo:RMDO_03462,
+        rmdo:RMDO_00631 exactly 1 rmdo:RMDO_03463
     
     
 Class: rmdo:RMDO_03465
 
     Annotations: 
-        rdfs:label "Age maximum"@en
+        rdfs:label "Age upper bound"@en
     
     SubClassOf: 
-        rmdo:RMDO_03462
+        rmdo:RMDO_03462,
+        rmdo:RMDO_00631 exactly 1 rmdo:RMDO_03463
     
     
 Class: rmdo:RMDO_03466
@@ -38144,6 +38157,49 @@ Class: rmdo:RMDO_03467
     
     SubClassOf: 
         rmdo:RMDO_03463
+    
+    
+Class: rmdo:RMDO_03471
+
+    Annotations: 
+        rdfs:comment "An individual contributor to the development, evaluation, and/or deployment of the resource."@en,
+        rdfs:label "Contributor"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00071
+    
+    
+Class: rmdo:RMDO_03472
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:03472",
+        rdfs:comment "A Subset is all or part of a Dataset or Partition: it is used to describe the demographics of the entity of which it's a part.  For example, if a Partition has 500 male patients and 600 female patients, one could list two Subsets to indicate those two groups.  One also could indicate a Subset of 1100 patients to cover the entire Partition.
+
+A Subset has one of more Count values (e.g., number of patients, number of images) and one or more Patient descriptors (age, sex, etc.)"@en,
+        rdfs:label "Subset"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00001,
+        rmdo:RMDO_00631 min 1 rmdo:RMDO_00055,
+        rmdo:RMDO_00631 min 1 rmdo:RMDO_03422
+    
+    
+Class: rmdo:RMDO_03477
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:03477",
+        rdfs:comment "A criterion other than Age, Sex, and Demograpic Group (race / ethnicity) by which to define a dataset, partition, or subset theireof.  
+
+Criteria (described as text) include:
+- Reference standard (\"ground truth\") value
+- Imaging finding
+- Geographic group
+- Image source
+- Risk factor",
+        rdfs:label "Subset criterion"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03422
     
     
 Individual: rmdo:RMDO_03468

@@ -4,19 +4,8 @@
 	"description": "Description of each partition",
 	"type": "object",
 	"properties": {
-		"Role": {
-			"type": "string",
-			"enum": [
-				"Training",
-				"Optimization",
-				"Testing",
-				"Internal testing",
-				"External testing"
-			]
-		},
 		"Subsets": {
 			"description": "Subsets of partition by age, sex, and/or race.",
-			"$comment": "",
 			"type": "array",
 			"items": {
 				"$ref": "RMDO.subset.json#"

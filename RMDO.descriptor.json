@@ -111,22 +111,46 @@
 			"type": "object",
 			"properties": {
 				"Created": {
-					"description": "Creation date",
+					"description": "Creation date: ISO date (e.g., 2024-01-01) or year",
 					"$comment": "RMDO:03419",
-					"type": "string",
-					"format": "date"
+					"type": [
+						"string",
+						"number"
+					],
+					"format": "date",
+					"minimum": 2012,
+					"examples": [
+						2024,
+						"2024-11-08"
+					]
 				},
 				"Published": {
 					"description": "Publication date",
 					"$comment": "RMDO:03420",
-					"type": "string",
-					"format": "date"
+					"type": [
+						"string",
+						"number"
+					],
+					"format": "date",
+					"minimum": 2012,
+					"examples": [
+						2024,
+						"2024-11-08"
+					]
 				},
 				"Updated": {
 					"description": "Date of last update",
 					"$comment": "RMDO:03421",
-					"type": "string",
-					"format": "date"
+					"type": [
+						"string",
+						"number"
+					],
+					"format": "date",
+					"minimum": 2012,
+					"examples": [
+						2024,
+						"2024-11-08"
+					]
 				}
 			},
 			"additionalProperties": false
@@ -196,7 +220,10 @@
 					},
 					"PMCID": {
 						"description": "PubMed Central ID",
-						"type": "integer"
+						"type": "string",
+						"examples": [
+							"PMC8017407"
+						]
 					}
 				},
 				"additionalProperties": false

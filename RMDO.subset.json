@@ -1,41 +1,34 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "RMDO.subset.json",
-	"description": "Subset data by age, sex, and/or race.",
+	"description": "Patient descriptor: age, sex, race, and/or other criterion.",
+	"$comment": "RMDO:03422",
 	"type": "object",
 	"properties": {
-		"Count": {
-			"$comment": "RMDO:00055",
-			"type": "object",
-			"minProperties": 1,
-			"properties": {
-				"Sites": {
-					"description": "Number of sites",
-					"$comment": "Site count (RMDO:03358)",
-					"type": "integer"
-				},
-				"Patients": {
-					"description": "Number of distinct patients",
-					"$comment": "Patient count (RMDO:00056)",
-					"type": "integer"
-				},
-				"Exams": {
-					"description": "Number of exams",
-					"$comment": "Study count (RMDO:00057)",
-					"type": "integer"
-				},
-				"Series": {
-					"description": "Number of imaging series",
-					"$comment": "Series count (RMDO:00632)",
-					"type": "integer"
-				},
-				"Images": {
-					"description": "Number of images",
-					"$comment": "Image count (RMDO:00058)",
-					"type": "integer"
-				}
-			},
-			"additionalProperties": false
+		"Sites": {
+			"description": "Number of sites",
+			"$comment": "Site count (RMDO:03358)",
+			"type": "integer"
+		},
+		"Patients": {
+			"description": "Number of distinct patients",
+			"$comment": "Patient count (RMDO:00056)",
+			"type": "integer"
+		},
+		"Exams": {
+			"description": "Number of exams",
+			"$comment": "Study count (RMDO:00057)",
+			"type": "integer"
+		},
+		"Series": {
+			"description": "Number of imaging series",
+			"$comment": "Series count (RMDO:00632)",
+			"type": "integer"
+		},
+		"Images": {
+			"description": "Number of images",
+			"$comment": "Image count (RMDO:00058)",
+			"type": "integer"
 		},
 		"Age range": {
 			"title": "Age range",
@@ -52,8 +45,8 @@
 					{
 						"description": "Value",
 						"type": "integer",
-						"minimum": 1,
-						"maximum": 120
+						"minimum": 0,
+						"maximum": 240
 					}
 				],
 				"additionalItems": {
@@ -125,25 +118,35 @@
 				"Native Hawaiian or Pacific Islander",
 				"White"
 			]
+		},
+		"Criterion": {
+			"description": "Other subset criterion, such as reference-standard value, imaging finding, or other factor",
+			"$comment": "RMDO:03477",
+			"type": "string"
+		},
+		"Comments": {
+			"type": "string"
+		},
+		"Subsets": {
+			"description": "A Subset may describe all or part of a Dataset, Partition, or Subset",
+			"$comment": "RMDO:3472",
+			"type": "array",
+			"items": {
+				"description": "Subset data by age, sex, and/or race.",
+				"$ref": "#"
+			}
 		}
 	},
-	"required": [
-		"Count"
-	],
 	"additionalProperties": false,
 	"examples": [
 		{
-			"count": {
-				"Patients": 501
-			},
+			"Patients": 501,
 			"Sex": "Female"
 		},
 		{
-			"count": {
-				"Patients": 42,
-				"Exams": 50,
-				"Images": 572
-			},
+			"Patients": 42,
+			"Exams": 50,
+			"Images": 572,
 			"Age range": [
 				[
 					50,

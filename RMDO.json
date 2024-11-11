@@ -6,6 +6,13 @@
 	"$comment": "RMDO:00010",
 	"type": "object",
 	"properties": {
+		"RMDO schema version": {
+			"type": "string",
+			"format": "date",
+			"enum": [
+				"2024-11-09"
+			]
+		},
 		"Project": {
 			"type": "object",
 			"properties": {
