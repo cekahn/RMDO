@@ -1,0 +1,88 @@
+{
+	"RMDO schema version": "2024-11-09",
+	"Project": {
+		"Name": "RSNA 2018 Pneumonia Detection Challenge",
+		"Details": {
+			"Persons": [
+				{
+					"Name": "George Shih, MD",
+					"Role": "Author",
+					"Email": "george@cornellradiology.org",
+					"Address": "Department of Radiology, Weill Cornell Medical College, 525 E 68th St, Box 141, New York, NY 10065 USA",
+					"ORCID": "https://orcid.org/0000-0002-8356-2011"
+				}
+			],
+			"Organizations": [
+				{
+					"Name": "Radiological Society of North America",
+					"Contact name": "Michele Riopel",
+					"Email": "informatics@rsna.org",
+					"Address": "820 Jorie Blvd, Suite 200, Oak Brook, IL 60523 USA",
+					"URL": "https://rsna.org"
+				}
+			],
+			"References": [
+				{
+					"Authors": "Shih G, et al.",
+					"Title": "Augmenting the National Institutes of Health Chest Radiograph Dataset with expert annotations of possible pneumonia",
+					"Source": "Radiology: Artificial Intelligence",
+					"Year": 2019,
+					"DOI": "10.1148/ryai.2019180041",
+					"URL": "https://doi.org/10.1148/ryai.2019180041",
+					"PMID": 33937785,
+					"PMCID": "PMC8017407"
+				}
+			]
+		}
+	},
+	"Datasets": [
+		{
+			"Name": "RSNA 2018 Pneumonia Detection Challenge",
+			"Details": {
+				"Date": {
+					"Published": 2018
+				},
+				"Content codes": [
+					"AI",
+					"CH"
+				],
+				"RadLex codes": [
+					"RID10351"
+				],
+				"License": "https://www.rsna.org/-/media/Files/RSNA/Education/AI-resources-and-training/AI-image-challenge/pneumonia-detection-challenge-terms-of-use-and-attribution.ashx"
+			},
+			"Imaging": {
+				"Modality": [
+					"Digital radiography (RID10351)"
+				],
+				"Procedure": [
+					{
+						"LOINC": "24648-8",
+						"Name": "XR Chest PA upright"
+					},
+					{
+						"LOINC": "36572-6",
+						"Name": "XR Chest AP"
+					}
+				],
+				"File format": [
+					"DICOM"
+				],
+				"Resolution": "Original, Downsampled",
+				"Pre-processing": "Standard normalization, Histogram normalization, Other",
+				"Burned-in PHI": "No"
+			},
+			"Labeling": "18 radiologists from 16 different institutions, including 12 chest radiologists from the STR, Mean of 10.6 years of experience (age range, 3-35 years), Scope of annotation (e.g., multi-institutional)",
+			"Confidentiality": "Manual review of images to exclude PHI",
+			"Partitions": {
+				"Training": {
+					"Images": 25473,
+					"Comments": "30,000 frontal view chest radiographs from the 112,000-image public National Institutes of Health (NIH) CXR8 dataset: 16,248 posteroanterior views, 13,752 anteroposterior views"
+				},
+				"Testing": {
+					"Images": 4527
+				}
+			}
+		}
+	]
+}
