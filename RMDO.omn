@@ -231,6 +231,7 @@ Class: rmdo:RMDO_00004
 
     Annotations: 
         <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Detail",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Details",
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00004",
         rdfs:comment "A characteristic of a Project, Model, or Dataset.  Whenever possible, values should link to other ontologies or controlled vocabularies.",
         rdfs:label "Descriptor"
@@ -629,7 +630,7 @@ Class: rmdo:RMDO_00042
         rdfs:label "Radiology technologist"
     
     SubClassOf: 
-        rmdo:RMDO_00040
+        rmdo:RMDO_03491
     
     
 Class: rmdo:RMDO_00043
@@ -639,7 +640,7 @@ Class: rmdo:RMDO_00043
         rdfs:label "Radiology nurse"
     
     SubClassOf: 
-        rmdo:RMDO_00040
+        rmdo:RMDO_03491
     
     
 Class: rmdo:RMDO_00044
@@ -717,7 +718,7 @@ Class: rmdo:RMDO_00051
 
     Annotations: 
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00051",
-        rdfs:label "Annotation pattern"
+        rdfs:label "Annotation type"
     
     SubClassOf: 
         rmdo:RMDO_00001
@@ -726,8 +727,10 @@ Class: rmdo:RMDO_00051
 Class: rmdo:RMDO_00052
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Image label",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Image-level label",
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00052",
-        rdfs:label "Image label"
+        rdfs:label "Image-level annotation"
     
     SubClassOf: 
         rmdo:RMDO_00051
@@ -736,8 +739,10 @@ Class: rmdo:RMDO_00052
 Class: rmdo:RMDO_00053
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Patient label",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Patient-level label",
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00053",
-        rdfs:label "Patient label"
+        rdfs:label "Patient-level annotation"
     
     SubClassOf: 
         rmdo:RMDO_00051
@@ -746,8 +751,10 @@ Class: rmdo:RMDO_00053
 Class: rmdo:RMDO_00054
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Exam-level annotation",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Study-level annotation",
         <http://www.geneontology.org/formats/oboInOwl#id> "RMDO:00054",
-        rdfs:label "Study label"
+        rdfs:label "Examination-level annotation"
     
     SubClassOf: 
         rmdo:RMDO_00051
@@ -37132,7 +37139,7 @@ Class: rmdo:RMDO_03364
         rdfs:label "Region of interest annotation"@en
     
     SubClassOf: 
-        rmdo:RMDO_00051
+        rmdo:RMDO_03479
     
     
 Class: rmdo:RMDO_03365
@@ -37356,10 +37363,10 @@ Class: rmdo:RMDO_03389
 
     Annotations: 
         rdfs:comment "\"What do the instances that comprise the dataset represent (for example, documents, photos, people, countries)? Are there multiple types of instances (for example, movies, users, and ratings; people and interactions between them; nodes and edges)?\"",
-        rdfs:label "Data type"@en
+        rdfs:label "Data"@en
     
     SubClassOf: 
-        rmdo:RMDO_03388
+        rmdo:RMDO_00001
     
     
 Class: rmdo:RMDO_03390
@@ -37368,7 +37375,7 @@ Class: rmdo:RMDO_03390
         rdfs:label "Radiology report text"@en
     
     SubClassOf: 
-        rmdo:RMDO_03389
+        rmdo:RMDO_03484
     
     
 Class: rmdo:RMDO_03391
@@ -37383,7 +37390,7 @@ Class: rmdo:RMDO_03391
 Class: rmdo:RMDO_03392
 
     Annotations: 
-        rdfs:label "Medical record data"@en
+        rdfs:label "Non-text medical record data"@en
     
     SubClassOf: 
         rmdo:RMDO_03389
@@ -37395,7 +37402,7 @@ Class: rmdo:RMDO_03393
         rdfs:label "Photograph"@en
     
     SubClassOf: 
-        rmdo:RMDO_03389
+        rmdo:RMDO_03391
     
     
 Class: rmdo:RMDO_03394
@@ -38200,6 +38207,216 @@ Criteria (described as text) include:
     
     SubClassOf: 
         rmdo:RMDO_03422
+    
+    
+Class: rmdo:RMDO_03479
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Pixel annotation",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Pixel label",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Pixel-level label",
+        rdfs:label "Pixel-level annotation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00051
+    
+    
+Class: rmdo:RMDO_03480
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Bounding box",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Bounding box label",
+        rdfs:label "Bounding box annotation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03479
+    
+    
+Class: rmdo:RMDO_03481
+
+    Annotations: 
+        rdfs:label "Model input"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03355
+    
+    
+Class: rmdo:RMDO_03482
+
+    Annotations: 
+        rdfs:label "Model output"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03355
+    
+    
+Class: rmdo:RMDO_03483
+
+    Annotations: 
+        rdfs:label "Segmentation annotation"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03479
+    
+    
+Class: rmdo:RMDO_03484
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Text data",
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Textual data",
+        rdfs:label "Text"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03389
+    
+    
+Class: rmdo:RMDO_03485
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Pathology report",
+        rdfs:label "Pathology report text"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03484
+    
+    
+Class: rmdo:RMDO_03486
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "EHR text",
+        rdfs:label "Electronic health record text"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03484
+    
+    
+Class: rmdo:RMDO_03487
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "RPA",
+        rdfs:label "Radiology physician assistant"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03491
+    
+    
+Class: rmdo:RMDO_03488
+
+    Annotations: 
+        rdfs:label "Radiology assistant"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03491
+    
+    
+Class: rmdo:RMDO_03489
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Radiation therapost",
+        rdfs:label "Radiation oncologist"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00075
+    
+    
+Class: rmdo:RMDO_03490
+
+    Annotations: 
+        rdfs:label "Dosimetrist"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00040
+    
+    
+Class: rmdo:RMDO_03491
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/urn:webprotege:ontology:8c46d389-52ef-468b-a58c-f168e57d95e6#altLabel> "Radiology staff",
+        rdfs:label "Radiology staff member"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00040
+    
+    
+Class: rmdo:RMDO_03492
+
+    Annotations: 
+        rdfs:label "Medical physicist"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00040
+    
+    
+Class: rmdo:RMDO_03493
+
+    Annotations: 
+        rdfs:label "Diagnostic radiology physicist"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03492
+    
+    
+Class: rmdo:RMDO_03494
+
+    Annotations: 
+        rdfs:label "Radiation therapy physicist"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03492
+    
+    
+Class: rmdo:RMDO_03495
+
+    Annotations: 
+        rdfs:label "Nuclear medicine physician"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_00075
+    
+    
+Class: rmdo:RMDO_03496
+
+    Annotations: 
+        rdfs:label "Radiology image"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03391
+    
+    
+Class: rmdo:RMDO_03497
+
+    Annotations: 
+        rdfs:label "Pathology image"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03391
+    
+    
+Class: rmdo:RMDO_03498
+
+    Annotations: 
+        rdfs:label "Other image"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03391
+    
+    
+Class: rmdo:RMDO_03499
+
+    Annotations: 
+        rdfs:label "Laboratory data"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03392
+    
+    
+Class: rmdo:RMDO_03500
+
+    Annotations: 
+        rdfs:label "Other text data"@en
+    
+    SubClassOf: 
+        rmdo:RMDO_03484
     
     
 Individual: rmdo:RMDO_03468
