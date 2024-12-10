@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.use.json",
+	"title": "Use type",
+	"id": "RMDO:00015",
+	"description": "Model use type (values for Model use)",
+	"type": "string",
+	"enum": [
+		"Artifact reduction",
+		"Decision support",
+		"Detection",
+		"Diagnosis",
+		"Exam protocol selection",
+		"Image processing",
+		"Image reconstruction",
+		"Image style transfer",
+		"Noise reduction",
+		"Procedure selection",
+		"Prognosis",
+		"Report data extraction",
+		"Report generation",
+		"Report impression generation",
+		"Report processing",
+		"Report summarization",
+		"Report translation",
+		"Risk assessment",
+		"Segmentation",
+		"Triage"
+	]
+}

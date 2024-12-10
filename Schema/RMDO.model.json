@@ -1,0 +1,154 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.model.json",
+	"title": "Model",
+	"description": "Description of each Model",
+	"$comment": "RMDO:00002",
+	"type": "object",
+	"properties": {
+		"Name": {
+			"description": "Model name",
+			"type": "string"
+		},
+		"Details": {
+			"$ref": "RMDO.descriptor.json"
+		},
+		"Uses": {
+			"type": "object",
+			"properties": {
+				"Intended": {
+					"description": "Intended model use",
+					"$comment": "RMDO:00012",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
+				},
+				"Out-of-scope": {
+					"description": "Out-of-scope model use",
+					"$comment": "RMDO:00013",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
+				},
+				"Excluded": {
+					"description": "Excluded model use",
+					"$comment": "RMDO:00014",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.use.json"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"Users": {
+			"type": "object",
+			"properties": {
+				"Intended": {
+					"description": "Intended model user",
+					"$comment": "RMDO:00037",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
+				},
+				"Out-of-scope": {
+					"description": "Out-of-scope model user",
+					"$comment": "RMDO:00038",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
+				},
+				"Excluded": {
+					"description": "Excluded model user",
+					"$comment": "RMDO:00039",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"$ref": "RMDO.user.json"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"Metrics": {
+			"$ref": "RMDO.metric.json"
+		},
+		"Caveat": {
+			"$comment": "RMDO:03353",
+			"type": "string"
+		},
+		"Decision threshold": {
+			"$comment": "RMDO:03351",
+			"type": "string"
+		},
+		"Ethical consideration": {
+			"$comment": "RMDO:03352",
+			"type": "string"
+		},
+		"Recommendation": {
+			"$comment": "RMDO:03354",
+			"type": "string"
+		},
+		"Availability": {
+			"description": "Model availability",
+			"$comment": "RMDO:03373",
+			"type": "string"
+		},
+		"Sustainability": {
+			"description": "Sustainability",
+			"$comment": "RMDO:03376",
+			"type": "string"
+		},
+		"Time to train model": {
+			"description": "Sustainability: Time to train model",
+			"$comment": "RMDO:03377",
+			"type": "string"
+		},
+		"Time to evaluate single input": {
+			"description": "Sustainability: Time to evaluate single input",
+			"$comment": "RMDO:03378",
+			"type": "string"
+		},
+		"Required processors": {
+			"description": "Sustainability: Required processors",
+			"$comment": "RMDO:03379",
+			"type": "string"
+		},
+		"Carbon footprint calculation": {
+			"description": "Sustainability: Carbon footprint calculation",
+			"$comment": "RMDO:03380",
+			"type": "string"
+		},
+		"Methods": {
+			"description": "Relevant machine-learning methods, from Papers With Code",
+			"$comment": "RMDO:00118",
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"$ref": "RMDO.method.json#"
+			}
+		},
+		"Tasks": {
+			"description": "Tasks to which the model is applied, from Papers With Code",
+			"$comment": "RMDO:00119",
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"$ref": "RMDO.task.json#"
+			}
+		}
+	},
+	"required": [
+		"Name"
+	],
+	"additionalProperties": false
+}

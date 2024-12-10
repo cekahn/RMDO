@@ -1,0 +1,29 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.user.json",
+	"title": "User type",
+	"id": "RMDO:00040",
+	"description": "Subclasses of Model user",
+	"type": "string",
+	"enum": [
+		"Administrator",
+		"Advanced practice provider",
+		"Diagnostic radiologist",
+		"Family member",
+		"General diagnostic radiologist",
+		"Interventional radiologist",
+		"Layperson",
+		"Non-physician provider",
+		"Nurse practitioner",
+		"Patient",
+		"Physician assistant",
+		"Physician",
+		"Radiologist",
+		"Radiology nurse",
+		"Radiology technologist",
+		"Referring physician",
+		"Referring provider",
+		"Researcher",
+		"Subspecialist diagnostic radiologist"
+	]
+}

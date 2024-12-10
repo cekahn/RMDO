@@ -1,0 +1,652 @@
+{
+	"Project": {
+		"Name": "Hello, World!",
+		"Details": {
+			"Content codes": [
+				"AI",
+				"CT"
+			],
+			"RadLex codes": [
+				"RID58",
+				"RID1169"
+			],
+			"Persons": [
+				{
+					"Name": "Kahn CE Jr",
+					"Role": "Author",
+					"Email": "ckahn@upenn.edu",
+					"Address": "University of Pennsylvania",
+					"ORCID": "https://orcid.org/0000-0002-6654-7434",
+					"URL": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8781589"
+				},
+				{
+					"Name": "Another person",
+					"Role": "Contributor",
+					"Email": "jdoe@example.com",
+					"Address": "String",
+					"ORCID": "https://orcid.org/0000-0000-0000-0000"
+				}
+			],
+			"Organizations": [
+				{
+					"Name": "RSNA",
+					"Contact name": "Chris Carr",
+					"Email": "informatics@rsna.org",
+					"Address": "Oak Brook, IL",
+					"URL": "http://rsna.org/"
+				}
+			],
+			"Date": {
+				"Created": "2024-10-01",
+				"Published": "2024-10-31",
+				"Updated": "2024-11-01"
+			},
+			"Version": "1.0",
+			"References": [
+				{
+					"Authors": "Rudie JD, et al.",
+					"Title": "The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset",
+					"Source": "Radiology: Artificial Intelligence",
+					"Year": 2024,
+					"DOI": "10.1148/ryai.240101",
+					"URL": "https://doi.org/10.1148/ryai.240101",
+					"PMID": 39441109,
+					"PMCID": 1
+				}
+			],
+			"License": "CC BY 4.0",
+			"Contact": "Contact information",
+			"Funding": "None",
+			"Ethical review": "Are you kidding?",
+			"Comments": "Example project"
+		}
+	},
+	"Models": [
+		{
+			"Name": "My Model",
+			"Details": {
+				"Content codes": [
+					"AI",
+					"CT"
+				],
+				"RadLex codes": [
+					"RID1169"
+				],
+				"Persons": [
+					{
+						"Name": "String",
+						"Role": "Author",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"ORCID": "https://orcid.org/0000-0000-0000-0000",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Organizations": [
+					{
+						"Name": "String",
+						"Contact name": "String",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Date": {
+					"Created": "1900-03-14",
+					"Published": "1900-03-14",
+					"Updated": "1900-03-14"
+				},
+				"Version": "String",
+				"References": [
+					{
+						"Authors": "Rudie JD, et al.",
+						"Title": "The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset",
+						"Source": "Radiology: Artificial Intelligence",
+						"Year": 2024,
+						"DOI": "10.1148/ryai.240101",
+						"URL": "https://doi.org/10.1148/ryai.240101",
+						"PMID": 39441109,
+						"PMCID": 1
+					}
+				],
+				"License": "CC BY 4.0",
+				"Contact": "String",
+				"Funding": "String",
+				"Ethical review": "String",
+				"Comments": "String"
+			},
+			"Uses": {
+				"Intended": [
+					"Artifact reduction"
+				],
+				"Out-of-scope": [
+					"Artifact reduction",
+					"Artifact reduction"
+				],
+				"Excluded": [
+					"Artifact reduction",
+					"Artifact reduction"
+				]
+			},
+			"Users": {
+				"Intended": [
+					"Administrator"
+				],
+				"Out-of-scope": [
+					"Administrator",
+					"Administrator"
+				],
+				"Excluded": [
+					"Administrator",
+					"Administrator"
+				]
+			},
+			"Metrics": [
+				"Precision",
+				"Recall"
+			],
+			"Caveat": "String",
+			"Decision threshold": "String",
+			"Ethical consideration": "String",
+			"Recommendation": "String",
+			"Availability": "String",
+			"Sustainability": "String",
+			"Time to train model": "String",
+			"Time to evaluate single input": "String",
+			"Required processors": "String",
+			"Carbon footprint calculation": "String",
+			"Methods": [
+				"(2+1)D Convolution"
+			],
+			"Tasks": [
+				"2D Human Pose Estimation"
+			]
+		}
+	],
+	"Datasets": [
+		{
+			"Name": "String",
+			"Details": {
+				"Content codes": [
+					"AI",
+					"CT"
+				],
+				"RadLex codes": [
+					"RID58",
+					"RID1169"
+				],
+				"Persons": [
+					{
+						"Name": "String",
+						"Role": "Author",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"ORCID": "https://orcid.org/0000-0000-0000-0000",
+						"URL": "http://www.altova.com/"
+					},
+					{
+						"Name": "String",
+						"Role": "Author",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"ORCID": "https://orcid.org/0000-0000-0000-0000",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Organizations": [
+					{
+						"Name": "String",
+						"Contact name": "String",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"URL": "http://www.altova.com/"
+					},
+					{
+						"Name": "String",
+						"Contact name": "String",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Date": {
+					"Created": "1900-03-14",
+					"Published": "1900-03-14",
+					"Updated": "1900-03-14"
+				},
+				"Version": "String",
+				"References": [
+					{
+						"Authors": "Rudie JD, et al.",
+						"Title": "The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset",
+						"Source": "Radiology: Artificial Intelligence",
+						"Year": 2024,
+						"DOI": "10.1148/ryai.240101",
+						"URL": "https://doi.org/10.1148/ryai.240101",
+						"PMID": 39441109,
+						"PMCID": 1
+					}
+				],
+				"License": "CC BY 4.0",
+				"Contact": "String",
+				"Funding": "String",
+				"Ethical review": "String",
+				"Comments": "String"
+			},
+			"Role": "Training",
+			"Labeling": "String",
+			"Missing information": "String",
+			"Relationships between instances": "String",
+			"Noise": "String",
+			"External data": "String",
+			"Confidentiality": "String",
+			"Subpopulations": "String",
+			"Re-identification": "String",
+			"Sensitive data": "String",
+			"Collection process": "String",
+			"Composition": {
+				"Confidentiality": "String",
+				"Number of instances": 1,
+				"Representativeness": {
+					"Population": "String",
+					"Verification": "String"
+				}
+			},
+			"Motivation": {
+				"Purpose": "String",
+				"Team": "String",
+				"Funding": "String",
+				"Comments": "String"
+			},
+			"Partioning scheme": "String",
+			"Partitions": [
+				{
+					"Role": "Training",
+					"Subsets": [
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						},
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						}
+					],
+					"Comments": "String"
+				},
+				{
+					"Role": "Training",
+					"Subsets": [
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						},
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						}
+					],
+					"Comments": "String"
+				}
+			],
+			"Subset": [
+				{
+					"Count": {
+						"Sites": 1,
+						"Patients": 1,
+						"Exams": 1,
+						"Series": 1,
+						"Images": 1
+					},
+					"Age range": [
+						[
+							2,
+							"years"
+						],
+						[
+							17,
+							"years"
+						]
+					],
+					"Sex": "Female",
+					"Demographic": "American Indian or Alaska Native"
+				},
+				{
+					"Count": {
+						"Sites": 1,
+						"Patients": 1,
+						"Exams": 1,
+						"Series": 1,
+						"Images": 1
+					},
+					"Age range": [
+						[
+							2,
+							"years"
+						],
+						[
+							17,
+							"years"
+						]
+					],
+					"Sex": "Female",
+					"Demographic": "American Indian or Alaska Native"
+				}
+			]
+		},
+		{
+			"Name": "String",
+			"Details": {
+				"Content codes": [
+					"AI",
+					"CT"
+				],
+				"RadLex codes": [
+				],
+				"Persons": [
+					{
+						"Name": "String",
+						"Role": "Author",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"ORCID": "https://orcid.org/0000-0000-0000-0000",
+						"URL": "http://www.altova.com/"
+					},
+					{
+						"Name": "String",
+						"Role": "Author",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"ORCID": "https://orcid.org/0000-0000-0000-0000",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Organizations": [
+					{
+						"Name": "String",
+						"Contact name": "String",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"URL": "http://www.altova.com/"
+					},
+					{
+						"Name": "String",
+						"Contact name": "String",
+						"Email": "jdoe@example.com",
+						"Address": "String",
+						"URL": "http://www.altova.com/"
+					}
+				],
+				"Date": {
+					"Created": "1900-03-14",
+					"Published": "1900-03-14",
+					"Updated": "1900-03-14"
+				},
+				"Version": "String",
+				"References": [
+					{
+						"Authors": "Rudie JD, et al.",
+						"Title": "The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset",
+						"Source": "Radiology: Artificial Intelligence",
+						"Year": 2024,
+						"DOI": "10.1148/ryai.240101",
+						"URL": "https://doi.org/10.1148/ryai.240101",
+						"PMID": 39441109,
+						"PMCID": 1
+					},
+					{
+						"Authors": "Rudie JD, et al.",
+						"Title": "The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset",
+						"Source": "Radiology: Artificial Intelligence",
+						"Year": 2024,
+						"DOI": "10.1148/ryai.240101",
+						"URL": "https://doi.org/10.1148/ryai.240101",
+						"PMID": 39441109,
+						"PMCID": 1
+					}
+				],
+				"License": "CC BY 4.0",
+				"Contact": "String",
+				"Funding": "String",
+				"Ethical review": "String",
+				"Comments": "String"
+			},
+			"Role": "Training",
+			"Labeling": "String",
+			"Missing information": "String",
+			"Relationships between instances": "String",
+			"Noise": "String",
+			"External data": "String",
+			"Confidentiality": "String",
+			"Subpopulations": "String",
+			"Re-identification": "String",
+			"Sensitive data": "String",
+			"Collection process": "String",
+			"Composition": {
+				"Confidentiality": "String",
+				"Number of instances": 1,
+				"Representativeness": {
+					"Population": "String",
+					"Verification": "String"
+				}
+			},
+			"Motivation": {
+				"Purpose": "String",
+				"Team": "String",
+				"Funding": "String",
+				"Comments": "String"
+			},
+			"Partioning scheme": "String",
+			"Partitions": [
+				{
+					"Role": "Training",
+					"Subsets": [
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						},
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						}
+					],
+					"Comments": "String"
+				},
+				{
+					"Role": "Training",
+					"Subsets": [
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						},
+						{
+							"Count": {
+								"Sites": 1,
+								"Patients": 1,
+								"Exams": 1,
+								"Series": 1,
+								"Images": 1
+							},
+							"Age range": [
+								[
+									2,
+									"years"
+								],
+								[
+									17,
+									"years"
+								]
+							],
+							"Sex": "Female",
+							"Demographic": "American Indian or Alaska Native"
+						}
+					],
+					"Comments": "String"
+				}
+			],
+			"Subset": [
+				{
+					"Count": {
+						"Sites": 1,
+						"Patients": 1,
+						"Exams": 1,
+						"Series": 1,
+						"Images": 1
+					},
+					"Age range": [
+						[
+							2,
+							"years"
+						],
+						[
+							17,
+							"years"
+						]
+					],
+					"Sex": "Female",
+					"Demographic": "American Indian or Alaska Native"
+				},
+				{
+					"Count": {
+						"Sites": 1,
+						"Patients": 1,
+						"Exams": 1,
+						"Series": 1,
+						"Images": 1
+					},
+					"Age range": [
+						[
+							2,
+							"years"
+						],
+						[
+							17,
+							"years"
+						]
+					],
+					"Sex": "Female",
+					"Demographic": "American Indian or Alaska Native"
+				}
+			]
+		}
+	]
+}

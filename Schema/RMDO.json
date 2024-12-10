@@ -1,0 +1,47 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "RMDO.json",
+	"title": "Project",
+	"description": "A Project is described by the Descriptor entities (Author, Date, Comments, etc.) and is comprised of zero or more Models and zero or more Datasets.",
+	"$comment": "RMDO:00010",
+	"type": "object",
+	"properties": {
+		"RMDO schema version": {
+			"type": "string",
+			"format": "date",
+			"enum": [
+				"2024-11-09"
+			]
+		},
+		"Project": {
+			"type": "object",
+			"properties": {
+				"Name": {
+					"type": "string"
+				},
+				"Details": {
+					"$ref": "RMDO.descriptor.json"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Models": {
+			"description": "Descriptions of each Model",
+			"type": "array",
+			"items": {
+				"$ref": "./RMDO.model.json"
+			}
+		},
+		"Datasets": {
+			"description": "Descriptions of each Dataset",
+			"type": "array",
+			"items": {
+				"$ref": "./RMDO.dataset.json"
+			}
+		}
+	},
+	"required": [
+		"Project"
+	],
+	"additionalProperties": false
+}
